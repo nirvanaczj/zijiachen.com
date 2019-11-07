@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- codepen attribution:https://codepen.io/soulwire/pen/Ffvlo-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137354001-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-137354001-2');
+        </script>
+        <meta charset="UTF-8">
+        <title>ZIJIA CHEN</title>
+        <link rel="icon" href="https://i.imgur.com/quzCPZa.png" type="image/gif">
+        <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">;
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <style>
+            @charset "UTF-8";
+            @import url(https://fonts.googleapis.com/css?family=Quantico);
+            html, body {
+                background:black;
+                height:100%;}
+
+            body{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                overflow:hidden;
+            }
+            /*Cool Stuff*/
+            #cool{
+                position:absolute;
+                padding: 16px 20px;
+                cursor:pointer;
+                top:28px;
+                left:16px;
+                color:white;
+                opacity:0.8;
+                font-family: 'Gugi', cursive;
+                font-size:1.5em;
+            }
+            #cool:hover{
+                opacity:1;
+            }
+            #email{
+                position:absolute;
+                padding: 16px 20px;
+                cursor:pointer;
+                bottom:28px;
+                left:16px;
+                color:white;
+                opacity:0.8;
+                font-family: 'Gugi', cursive;
+                font-size:1.5em;
+            }
+            #email a{
+                text-decoration:none;
+                color:white;
+            }
+            #email:hover{
+                opacity:1
+            }
+            #demo{
+                background:transparent;
+                display:none;
+                position:absolute;
+                z-index:1000;
+                height:100vh;
+                width:100vw;
+            }
+            #moveup{
+                transform: translate(0,110vh)
+            }
+            .item{
+                display:inline-block;
+                /*                display:none;*/
+                background:#3292f9;
+                opacity:0.5;
+                width:5vw;
+                height:3vw;
+                margin: 40px 0px 0px 30px;
+            }
+            #folder a{
+                text-decoration:none;
+                color:white;
+            }
+            span:hover{
+                background: red;
+            }
+
+            #tour span:hover{
+                background:#3292f9;
+            } 
+
+            #folder    {
+                display: block;
+                padding:20px 50px;    
+                line-height:50px;
+                margin: auto;
+                transform: translate(0px,0px);
+                font-family: 'Gugi', cursive;
+                position:absolute;
+                top:38%;
+                color:white;
+            }
+            #container {
+                background:transparent;
+                /*                background-image: url("logo1.png");*/
+                background-repeat:no-repeat;
+                background-position: center;
+                position: absolute;
+                left: 50%;
+                top: 50%;  
+                z-index: 500;
+                border-radius:10px;
+            }
+            /**05/05navigation bar**/
+            header {
+                width: 100%;
+                height: 76px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 100;}
+            nav {
+                float: right;
+                padding: 20px;}
+
+
+            #menu-icon {
+                display:none;
+                width: 100px;
+                height: 100px;
+                background: white url('https://i.imgur.com/9xF9EBg.png') center;
+                background-size: cover;}
+
+            a:hover#menu-icon {
+                background-color: #444;
+                border-radius: 4px 4px 0 0;}
+            header {visibility: hidden;}
+
+            @media only screen and (max-width : 1000px) {
+                header {
+                    visibility: visible;
+                    position: absolute;}
+
+                #menu-icon {
+                    display:inline-block;}
+
+                nav ul, nav:active ul { 
+
+                    display: none;
+                    position: absolute;
+                    padding: 20px;
+                    background: #fff;
+                    border: 0px solid #444;
+                    right: 20px;
+                    top: 60px;
+                    width: 40%;
+                    border-radius: 4px 0 4px 4px;}
+
+                nav li a{    
+                    text-decoration:none; color:black;}
+                nav li {
+                    font-family: 'Gugi', cursive;
+                    text-align: center;
+                    width: 100%;
+                    padding: 10px 0;
+                    font-size:2em;
+                    margin: 0;}
+
+                nav:hover ul {
+                    display: block;}
+            }
+            * {
+                box-sizing: border-box;
+            }
+
+            /* Button used to open the contact form - fixed at the bottom of the page */
+            .open-button {
+                background-color: transparent;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                opacity: 0.8;
+                position: fixed;
+                bottom: 23px;
+                left: 28px;
+                width: 280px;
+                font-family: 'Gugi', cursive;
+                font-size:1.5em;
+            }
+
+            /* The popup form - hidden by default */
+            .form-popup {
+                display: none;
+                position: fixed;
+                bottom: 0;
+                left: 15px;
+                border: 3px solid #f1f1f1;
+                z-index: 9;
+            }
+
+            /* Add styles to the form container */
+            .form-container {
+                max-width: 300px;
+                padding: 10px;
+                background-color: white;
+                background-image: url("https://i.imgur.com/Asvuvrd.jpg");
+                background-size:300px;
+                font-family: 'Gugi', cursive;
+            }
+
+            /* Full-width input fields */
+            .form-container input[type=text], .form-container input[type=password], textarea {
+                width: 100%;
+                line-height:20px;
+                padding: 15px;
+                margin: 5px 0 22px 0;
+                border: none;
+                background: #f1f1f1;
+                font-family: 'Gugi', cursive;
+            }
+
+            /* When the inputs get focus, do something */
+            .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+
+            /* Set a style for the submit/login button */
+            .form-container .btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                margin-bottom:10px;
+                opacity: 0.8;
+                font-family: 'Gugi', cursive;
+            }
+
+            /* Add a red background color to the cancel button */
+            .form-container .cancel {
+                background-color: #555;
+            }
+
+            /* Add some hover effects to buttons */
+            .form-container .btn:hover, .open-button:hover {
+                opacity: 1;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+
+    <body>
+        <!--
+<header>
+<nav>
+<a href="#" id="menu-icon"></a>
+<ul>
+<li><a href="/portfolio/index.html">Portfolio</a></li>
+</ul>
+</nav>
+</header>
+-->
+        <!--        <iframe src="badguy.mp3" allow="autoplay" id="audio" style="display:none"></iframe>-->
+        <div id="folder">
+
+            <!--            <span style="background:red;"><a href="">Home</a></span><br>-->
+            <!-- <span><a href="http://b.parsons.edu/~chenz352/parsons/designer.html">About</a></span><br> -->
+            <!--            <span><a href="/portfolio/index.html">Portfolio</a></span><br>-->
+            <!-- <div id="tour"><span><a href="">Quick Tour</a></span></div><br><br>-->
+            <!-- <span><a href="http://b.parsons.edu/~chenz352/parsons/dreamer.html">Dreamer</a></span><br>-->
+            <!--<span style="font-size:0.6em;">music by Billie Eilish</span><br>-->
+
+        </div>
+
+        <div id='container'></div>
+
+        <div id="mycanvas">
+            <canvas id="snap" width="650" height="350" ></canvas> 
+        </div>
+
+        <!--        <button class="open-button" onclick="openForm()">Leave a reply here !</button>-->
+        <!--
+<div class="form-popup" id="myForm">
+<form action="action_page1.php" class="form-container" id="emailForm" name="emailForm" method="post">
+<h1>Say Hi to me!</h1><br><br>
+<label for="email"><b>Email</b></label>
+<input type="text" placeholder="Enter your email here" name="email" id="email" required>
+
+<label for="comments"><b>Message</b></label>
+<input type="text" placeholder="Leave a message to me!" name="comments" id="comments" required>
+<br><br> <h5>or just shoot an E-mail to</h5><br>
+<h5><a href="mailto:chen@newschool.edu" style="color:#F9A67E;">chen@newschool.edu</a></h5><br>
+<button type="submit" class="btn" name="SubmitBtn" id="SubmitBtn">Submit</button>
+<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+</form>
+</div>
+-->
+
+
+        <div id="cool" onclick="coolfunction()">Something Cool</div>
+        <div id="email"><a href="mailto:chen@newschool.edu">chen@newschool.edu</a></div>
+
+        <div id="demo">
+            <div id="moveup">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <br>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <br>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <br>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <br>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <br>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <br>
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+        <script src='https://gist.github.com/mrdoob/838785/raw/a19a753b441d6ad41707c58f06dbe17f3470423c/RequestAnimationFrame.js'></script>
+        <script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
+        <script src='https://raw.github.com/mrdoob/stats.js/master/build/stats.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+        <script  src="js/index.js"></script>
+        <script  src="js/type.js"></script>
+        <script  src="js/cool.js"></script>
+    </body>
+</html>
