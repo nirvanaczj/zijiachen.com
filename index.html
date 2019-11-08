@@ -2,6 +2,8 @@
 <html lang="en" >
 
     <head>
+        <!-- ADOBE FONTS -->
+        <link rel="stylesheet" href="https://use.typekit.net/ygu8mmu.css">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <!-- codepen attribution:https://codepen.io/soulwire/pen/Ffvlo-->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137354001-2"></script>
@@ -30,6 +32,9 @@
                 align-items: center;
                 overflow:hidden;
             }
+            div{
+                display:inline;
+            }
             /*Cool Stuff*/
             #cool{
                 position:absolute;
@@ -55,7 +60,7 @@
                 opacity:0.8;
                 font-family: 'Gugi', cursive;
                 font-size:1.2em;
-                z-index:1000;
+                z-index:10000;
             }
             #email a{
                 text-decoration:none;
@@ -73,28 +78,128 @@
                 width:100vw;
             }
             #moveup{
-                transform: translate(0,110vh)
+                transform: translate(0,110vh);
+                background:transparent;
+                display:none;
+                position:absolute;
+                z-index:1500;
+                height:100vh;
+                width:100vw;
+            }
+            .texttrigger{
+                position:absolute;
+                top:20px;
+                right:20px;
+                font-size:1.25vw;
+                text-align: right;
+                line-height:5vh;
+                color:black;
+                font-family: filicudi-striped, sans-serif;
+                font-weight: 400;
+                font-style: normal;
             }
             .item{
                 display:inline-block;
-                /*                display:none;*/
-                background:#3292f9;
-                opacity:1;
-                width:5vw;
-                height:3vw;
-                margin: 40px 0px 0px 30px;
+                line-height:2vw;
+                text-align: center;
+                /* display:none;*/
+                background:white;
+                color:black;
+                opacity:0.6;
+                transition-duration:0.5s;
+                width:3.2vw;
+                height:4vh;
+                margin: 1vw -5px 0px 1vw;
+                font-size:1vw;
+                font-family: filicudi-striped, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                padding:0;
             }
+            .item img{
+                width:100%;
+                height:100%;
+                object-fit: cover;
+            }
+            .item:hover{
+                opacity:1;
+            }
+            .item:not(:hover){
+                opacity:0.6;
+            }
+            .itemStady{
+                cursor:none;
+                display:inline-flex;
+                align-items: center;
+                justify-content: center;
+                line-height:2vw;
+                text-align: center;
+                /* display:none;*/
+                background:#3292f9;
+                color:black;
+                opacity:1;
+                width:11.6vw;
+                opacity:0.5;
+                transition-duration:1.5s;
+                height:calc(12vh + 2vw);
+                margin: 1vw -4px 0px 9.4vw;
+                font-size:1vw;
+                font-family: filicudi-striped, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                border: 10px white ridge;
+                box-shadow: 10px 5px 5px white;
+            }
+            .itemStady:hover{
+                opacity:1;
+            }
+            .itemStady:not(:hover){
+                opacity:0.5;
+            }
+/*
+            .itemStady:hover{
+                opacity:1;
+                background:#7ebbfb;
+            }
+            .itemStady:not(:hover){
+                opacity:0.5;
+                background:white;
+            }
+*/
+            .itemStady img{
+                width:40%;
+                /*                height:;*/
+                object-fit: cover;
+            }
+            .itemLyrics{
+                display:inline-block;
+                line-height:4vh;
+                text-align: center;
+                /* display:none;*/
+                background:black;
+                color:white;
+                opacity:1;
+                /*                width:5vw;*/
+                height:4vh;
+                margin: 1vw 0px 0px 0.3vw;
+                font-size:1vw;
+                font-family: filicudi-striped, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .adj:hover{                
+                background: orange;
+                cursor:default;
+            }
+            /**END OF COOL STUFF**/
             #folder a{
                 text-decoration:none;
                 color:white;
             }
             span:hover{
                 background: red;
+                cursor:default;
             }
-
-            #tour span:hover{
-                background:#3292f9;
-            } 
 
             #folder    {
                 display: block;
@@ -118,6 +223,10 @@
                 z-index: 500;
                 border-radius:10px;
             }
+
+
+
+
             /**05/05navigation bar**/
             header {
                 width: 100%;
@@ -143,6 +252,7 @@
                 border-radius: 4px 4px 0 0;}
             header {visibility: hidden;}
 
+            /*Phone Responsive**/
             @media only screen and (max-width : 1000px) {
                 header {
                     visibility: visible;
@@ -179,82 +289,6 @@
             * {
                 box-sizing: border-box;
             }
-
-            /* Button used to open the contact form - fixed at the bottom of the page */
-            .open-button {
-                background-color: transparent;
-                color: white;
-                padding: 16px 20px;
-                border: none;
-                cursor: pointer;
-                opacity: 0.8;
-                position: fixed;
-                bottom: 23px;
-                left: 28px;
-                width: 280px;
-                font-family: 'Gugi', cursive;
-                font-size:1.5em;
-            }
-
-            /* The popup form - hidden by default */
-            .form-popup {
-                display: none;
-                position: fixed;
-                bottom: 0;
-                left: 15px;
-                border: 3px solid #f1f1f1;
-                z-index: 9;
-            }
-
-            /* Add styles to the form container */
-            .form-container {
-                max-width: 300px;
-                padding: 10px;
-                background-color: white;
-                background-image: url("https://i.imgur.com/Asvuvrd.jpg");
-                background-size:300px;
-                font-family: 'Gugi', cursive;
-            }
-
-            /* Full-width input fields */
-            .form-container input[type=text], .form-container input[type=password], textarea {
-                width: 100%;
-                line-height:20px;
-                padding: 15px;
-                margin: 5px 0 22px 0;
-                border: none;
-                background: #f1f1f1;
-                font-family: 'Gugi', cursive;
-            }
-
-            /* When the inputs get focus, do something */
-            .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-                background-color: #ddd;
-                outline: none;
-            }
-
-            /* Set a style for the submit/login button */
-            .form-container .btn {
-                background-color: #4CAF50;
-                color: white;
-                padding: 16px 20px;
-                border: none;
-                cursor: pointer;
-                width: 100%;
-                margin-bottom:10px;
-                opacity: 0.8;
-                font-family: 'Gugi', cursive;
-            }
-
-            /* Add a red background color to the cancel button */
-            .form-container .cancel {
-                background-color: #555;
-            }
-
-            /* Add some hover effects to buttons */
-            .form-container .btn:hover, .open-button:hover {
-                opacity: 1;
-            }
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     </head>
@@ -273,11 +307,6 @@
         <!--        <iframe src="badguy.mp3" allow="autoplay" id="audio" style="display:none"></iframe>-->
         <div id="folder">
 
-            <!--            <span style="background:red;"><a href="">Home</a></span><br>-->
-            <!-- <span><a href="http://b.parsons.edu/~chenz352/parsons/designer.html">About</a></span><br> -->
-            <!--            <span><a href="/portfolio/index.html">Portfolio</a></span><br>-->
-            <!-- <div id="tour"><span><a href="">Quick Tour</a></span></div><br><br>-->
-            <!-- <span><a href="http://b.parsons.edu/~chenz352/parsons/dreamer.html">Dreamer</a></span><br>-->
             <!--<span style="font-size:0.6em;">music by Billie Eilish</span><br>-->
 
         </div>
@@ -288,139 +317,156 @@
             <canvas id="snap" width="650" height="350" ></canvas> 
         </div>
 
-        <!--        <button class="open-button" onclick="openForm()">Leave a reply here !</button>-->
-        <!--
-<div class="form-popup" id="myForm">
-<form action="action_page1.php" class="form-container" id="emailForm" name="emailForm" method="post">
-<h1>Say Hi to me!</h1><br><br>
-<label for="email"><b>Email</b></label>
-<input type="text" placeholder="Enter your email here" name="email" id="email" required>
-
-<label for="comments"><b>Message</b></label>
-<input type="text" placeholder="Leave a message to me!" name="comments" id="comments" required>
-<br><br> <h5>or just shoot an E-mail to</h5><br>
-<h5><a href="mailto:chen@newschool.edu" style="color:#F9A67E;">chen@newschool.edu</a></h5><br>
-<button type="submit" class="btn" name="SubmitBtn" id="SubmitBtn">Submit</button>
-<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-</form>
-</div>
--->
-
-
         <div id="cool" onclick="coolfunction()">Something Cool</div>
         <div id="email"><a href="mailto:chen@newschool.edu">chen@newschool.edu</a></div>
 
-        <div id="demo">
-            <div id="moveup">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+        <div id="demo"></div>
+        <div id="moveup">
+            <div class="texttrigger">
+                <span class="adj"></span> <span onclick="handleMain()">MAIN</span>
                 <br>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+<!--                <span class="adj">"Adjunct"</span> <span onclick="handleCEO()">CEO</span><br>-->
+                <span class="adj">"Sort of"</span> <span onclick="handleFront()">Frontend Designer</span>
                 <br>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+                <span class="adj">"Stylish"</span> <span onclick="handleSoft()">Software Engineer</span>
                 <br>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <br>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <br>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <br>
-                
+                <span class="adj">"Enthusiastic"</span> <span onclick="handleData()">Data Analytics</span>
             </div>
+
+            <div class="itemLyrics" style="margin-left:1vw;">ZIJIA</div>
+            <div class="itemLyrics">CHEN</div>
+            <br>
+            <div id="part1">
+                <div class="item"><img src="portasset/book.png"></div>
+                <div class="item"><img src="portasset/meow.jpg"></div>
+                <div class="item"><img src="portasset/poster.png"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <br>
+            <div id="LyricsPart1">
+                <div class="itemLyrics" style="margin-left:1vw;">my</div>
+                <div class="itemLyrics">soul?</div>
+                <div class="itemLyrics">so</div>
+                <div class="itemLyrics">cynical</div>
+            </div>
+            <br>
+            <div id="part2">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <br>
+            <div id="LyricsPart2">
+                <div class="itemLyrics" style="margin-left:1vw;">you</div>
+                <div class="itemLyrics">should</div>
+                <div class="itemLyrics">see</div>
+                <div class="itemLyrics">me</div>
+                <div class="itemLyrics">in</div>
+                <div class="itemLyrics">a</div>
+                <div class="itemLyrics">crown</div>
+            </div>
+            <br>
+            <div id="part3">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <br>
+            <div id="LyricsPart3">
+                <div class="itemLyrics" style="margin-left:1vw;">Standing</div>
+                <div class="itemLyrics">there,</div>
+                <div class="itemLyrics">killing</div>
+                <div class="itemLyrics">time,</div>
+                <div class="itemLyrics">can't</div>
+                <div class="itemLyrics">commit</div>
+                <div class="itemLyrics">to </div>
+                <div class="itemLyrics">anything </div>
+                <div class="itemLyrics">but </div>
+                <div class="itemLyrics">a</div>
+                <div class="itemLyrics">crime</div>
+            </div>
+            <br>
+            <div id="part4">
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <br>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+
+                <br>
+
+                <div class="itemStady">
+                    <img src="stadylogo.png">
+                </div>
+
+                <br>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <br>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <br>
+            </div>
+            <br>
+            <div id="LyricsPart4">
+                <div class="itemLyrics" style="margin-left:1vw;">MY</div>
+                <div class="itemLyrics">STRANGE</div>
+                <div class="itemLyrics">ADDICTION</div>
+            </div>
+
+
+
         </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <script>
-            function openForm() {
-                document.getElementById("myForm").style.display = "block";
-            }
-
-            function closeForm() {
-                document.getElementById("myForm").style.display = "none";
-            }
-        </script>
         <script src='https://gist.github.com/mrdoob/838785/raw/a19a753b441d6ad41707c58f06dbe17f3470423c/RequestAnimationFrame.js'></script>
         <script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
         <script src='https://raw.github.com/mrdoob/stats.js/master/build/stats.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
         <script  src="js/index.js"></script>
         <script  src="js/type.js"></script>
         <script  src="js/cool.js"></script>
+        <script  src="js/filter.js"></script>
     </body>
 </html>

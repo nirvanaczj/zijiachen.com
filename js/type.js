@@ -1,9 +1,9 @@
 //Roboto-Regular
 //var fontName = "https://cdn.glitch.com/6a98ee39-b203-42c3-b9d2-3e2213e5f4c5%2FRoboto-Regular.ttf?v=1573066194338"
 //Montserrat-Regular
-//var fontName = "https://cdn.glitch.com/6a98ee39-b203-42c3-b9d2-3e2213e5f4c5%2FMontserrat-Regular.ttf?v=1573081292950"
+var fontName = "https://cdn.glitch.com/6a98ee39-b203-42c3-b9d2-3e2213e5f4c5%2FMontserrat-Regular.ttf?v=1573081292950"
 //Raleway-Black
- var fontName = "https://cdn.glitch.com/6a98ee39-b203-42c3-b9d2-3e2213e5f4c5%2FRaleway-Black.ttf?v=1573144641112"
+// var fontName = "https://cdn.glitch.com/6a98ee39-b203-42c3-b9d2-3e2213e5f4c5%2FRaleway-Black.ttf?v=1573144641112"
 opentype.load(fontName, function(err, font) {
     window.font = font
     if (err) {
