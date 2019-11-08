@@ -2,6 +2,7 @@ var demo = document.querySelector('#demo')
 var cool = document.querySelector('#cool')
 var items = document.querySelectorAll('.item')
 var moveup = document.querySelector('#moveup')
+var partcontainer = document.querySelector('#container')
 function coolfunction(){
     cool.style.display = 'none'
     demo.style.display = 'block'
@@ -15,8 +16,9 @@ function coolfunction(){
         demo.style.backgroundColor = randomColor
     }, 50)
     setTimeout(function(){
-        demo.style.backgroundColor = 'white'
-        demo.style.opacity = '0.9'
+//        demo.style.backgroundColor = 'white'
+        demo.style.opacity = '0.6'
+        partcontainer.style.background = 'transparent'
         man = false;
         TweenMax.to("#moveup", 3, { ease:  Elastic.easeOut.config(1, 0.3), y: '0vh' })
 
