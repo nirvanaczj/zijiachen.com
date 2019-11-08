@@ -3,41 +3,42 @@ var cool = document.querySelector('#cool')
 var items = document.querySelectorAll('.item')
 var moveup = document.querySelector('#moveup')
 var partcontainer = document.querySelector('#container')
+var email = document.querySelector('#email')
 function coolfunction(){
+    
     cool.style.display = 'none'
     demo.style.display = 'block'
     moveup.style.display = 'block'
-    var timesRun = 0;
-//    var interval = setInterval(function(){
-//        timesRun += 1;
-//        if(timesRun === 10){
-//            clearInterval(interval);
-//        }
-//        var randomColor = `rgb(${(Math.random()*255)},${(Math.random()*255)},${(Math.random()*255)})`
-//        demo.style.backgroundColor = randomColor
-//    }, 50)
-    setTimeout(function(){
-        demo.style.backgroundColor = 'white'
-        demo.style.opacity = '0.8'
-        partcontainer.style.background = 'transparent'
-        man = false;
-        TweenMax.to("#moveup", 2.5, { ease:  Elastic.easeOut.config(1, 0.3), y: '0vh' })
-
-    },0);
-
+    moveup.style.background = 'transparent'
+    moveup.style.opacity = '1'
+    email.style.fontFamily = 'filicudi-striped, sans-serif'
+    email.style.right = '20px'
+    email.style.padding = '0'
+    email.style.left = 'auto'
+    demo.style.backgroundColor = 'white'
+    demo.style.opacity = '0.8'
+    partcontainer.style.background = 'transparent'
+    man = false;
+    TweenMax.to("#moveup", 2.5, { ease:  Elastic.easeOut.config(1, 0.3), y: '0vh' })
 }
 
 
 
-//TweenMax.to('#moveup', duration 2.5, { ease: Power4.easeOut, y: -500 });
-
-
-//var img = document.getElementById('logoPic')
-//var logoHeightpx = img.clientHeight;
-//var clientHeight = window.innerHeight;
-//var clientWidth = window.innerWidth;
-//var stadyblock = document.querySelector('.itemStady')
-////stadyblock.style.padding = `calc(6vh + 1vw -${logoHeightpx})`
-//console.log(0.12*clientHeight + 0.02*clientWidth)
-//console.log(logoHeightpx)
-//stadyblock.style.paddingTop = `${0.06*clientHeight + 0.01*clientWidth - logoHeightpx}px`
+function undoCool(){
+    appearWhole()
+    cool.style.display = 'block'
+    demo.style.display = 'none'
+    moveup.style.display = 'block'
+    moveup.style.background = 'white'
+    moveup.style.opacity = '0.8'
+    email.style.fontFamily = 'Gugi'
+    email.style.fontStyle = 'cursive'
+    email.style.right = 'auto'
+    email.style.padding = '16px 20px'
+    email.style.left = '16px'
+    partcontainer.style.backgroundImage = "url('logo1.png')"
+    partcontainer.style.backgroundRepeat = 'no-repeat'
+    partcontainer.style.backgroundPosition = 'center'
+//    man = true;
+    TweenMax.to("#moveup", 2.5, { ease: Power4.easeOut, y: '110vh' })
+}

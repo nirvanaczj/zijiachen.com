@@ -106,6 +106,7 @@
                 background:white;
                 color:black;
                 opacity:0.6;
+                transition-property: opacity;
                 transition-duration:0.5s;
                 width:3.2vw;
                 height:4vh;
@@ -128,7 +129,7 @@
                 opacity:0.6;
             }
             .itemStady{
-                cursor:none;
+                cursor:wait;
                 display:inline-flex;
                 align-items: center;
                 justify-content: center;
@@ -138,17 +139,17 @@
                 background:#3292f9;
                 color:black;
                 opacity:1;
-                width:11.6vw;
                 opacity:0.5;
+                transition-property: opacity;
                 transition-duration:1.5s;
-                height:calc(12vh + 2vw);
-                margin: 1vw -4px 0px 9.4vw;
+                width:3.2vw;
+                height:4vh;
+                margin: 1vw -5px 0px 1vw;
                 font-size:1vw;
                 font-family: filicudi-striped, sans-serif;
                 font-weight: 400;
                 font-style: normal;
-                border: 10px white ridge;
-                box-shadow: 10px 5px 5px white;
+/*                border: 10px white ridge;*/
             }
             .itemStady:hover{
                 opacity:1;
@@ -156,16 +157,7 @@
             .itemStady:not(:hover){
                 opacity:0.5;
             }
-/*
-            .itemStady:hover{
-                opacity:1;
-                background:#7ebbfb;
-            }
-            .itemStady:not(:hover){
-                opacity:0.5;
-                background:white;
-            }
-*/
+
             .itemStady img{
                 width:40%;
                 /*                height:;*/
@@ -323,14 +315,16 @@
         <div id="demo"></div>
         <div id="moveup">
             <div class="texttrigger">
-                <span class="adj"></span> <span onclick="handleMain()">MAIN</span>
+                <span class="adj"></span> <span onclick="undoCool()">🔫Undo Cool</span>
                 <br>
-<!--                <span class="adj">"Adjunct"</span> <span onclick="handleCEO()">CEO</span><br>-->
-                <span class="adj">"Sort of"</span> <span onclick="handleFront()">Frontend Designer</span>
+                <span class="adj"></span> <span onclick="handleMain()">🏹Triggers</span>
                 <br>
-                <span class="adj">"Stylish"</span> <span onclick="handleSoft()">Software Engineer</span>
+                <span class="adj">🈯️"Adjunct"</span> <span onclick="handleCEO()">CEO</span><br>
+                <span class="adj">👨‍💻"somewhat"</span> <span onclick="handleFront()">Frontend Designer</span>
                 <br>
-                <span class="adj">"Enthusiastic"</span> <span onclick="handleData()">Data Analytics</span>
+                <span class="adj">🉑"Stylish"</span> <span onclick="handleSoft()">Software Engineer</span>
+                <br>
+                <span class="adj">📈"Enthusiastic"</span> <span onclick="handleData()">Data Analytics</span>
             </div>
 
             <div class="itemLyrics" style="margin-left:1vw;">ZIJIA</div>
@@ -411,7 +405,11 @@
                 <div class="item" style="background:black; opacity:1"></div>
                 <div class="item" style="background:black; opacity:1"></div>
                 <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
                 <br>
+                <div class="item"></div>
+                <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
@@ -422,9 +420,26 @@
 
                 <br>
 
-                <div class="itemStady">
-                    <img src="stadylogo.png">
-                </div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <br>
+                
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
 
                 <br>
                 <div class="item"></div>
@@ -434,6 +449,8 @@
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
                 <br>
                 <div class="item" style="background:black; opacity:1"></div>
                 <div class="item" style="background:black; opacity:1"></div>
@@ -442,7 +459,9 @@
                 <div class="item" style="background:black; opacity:1"></div>
                 <div class="item" style="background:black; opacity:1"></div>
                 <div class="item" style="background:black; opacity:1"></div>
-                <br>
+                <div class="item" style="background:black; opacity:1"></div>
+                <div class="item" style="background:black; opacity:1"></div>
+                
             </div>
             <br>
             <div id="LyricsPart4">
