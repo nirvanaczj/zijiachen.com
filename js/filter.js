@@ -25,7 +25,7 @@ console.log(part2 .length)
 
 //console.log(allgrids.length)
 function handleMain(){
-    if(localStorage.getItem('clicked')  == 'true'){
+    if(localStorage.getItem('clicked')  == 'true'){        
         appearWhole()
         localStorage.setItem('clicked','false')
     }
@@ -43,7 +43,7 @@ function handleCEO(){
         moveup.style.display = 'flex'
         moveup.style.justifyContent = 'center'
         moveup.style.alignItems = 'center'
-    },1005)
+    },1100)
 }
 
 
@@ -65,7 +65,7 @@ function handleFront(){
             appearflex(part1,i)
             part1[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
         }
-    },1050)
+    },1100)
 }
 
 
@@ -86,7 +86,7 @@ function handleSoft(){
             appearflex(part2,i)
             part2[i].style.height = `${(((100-(part2.length+1)*2.5)/part2.length)/3.2)*4}vh`
         }
-    },1050)
+    },1100)
 }
 
 
@@ -107,7 +107,7 @@ function handleData(){
             appearflex(part3,i)
             part3[i].style.height = `${(((100-(part3.length+1)*2.5)/part3.length)/3.2)*4}vh`
         }
-    },1050)
+    },1100)
 }
 
 
@@ -127,7 +127,7 @@ function appearflex(part,i){
         part[i].style.margin = '0 0 0 0'
         part[0].style.marginLeft = '2.5vw'
         part[i].style.flex = '1'
-        part[i].style.display = 'block'
+        part[i].style.display = 'inline-flex'
         part[i].style.marginRight = '2.5vw'
         //        part[i].style.transform = 'scale(2,2)'
         //        part[i].style.marginLeft = `${part[i].style.marginLeft.slice(0,-2)*2}px`
@@ -167,7 +167,7 @@ function appearWhole(){
         if(timesrun1 === allgrids.length-1){
             clearInterval(interval1);
         }
-        allgrids[timesrun1].style.display = 'inline-block'
+        allgrids[timesrun1].style.display = 'inline-flex'
         allgrids[timesrun1].style.margin = '1vw -5px 0px 1vw'
         //        allgrids[timesrun1].style.width = '3.2vw'
 //        allgrids[timesrun1].style.height = '4vh'
