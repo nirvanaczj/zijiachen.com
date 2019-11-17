@@ -50,6 +50,19 @@
             #cool:hover{
                 opacity:1;
             }
+            #projname{
+                position:absolute;
+/*                padding: 16px 20px;*/
+                cursor:pointer;
+                bottom:28px;
+                left:1vw;
+                color:black;
+                opacity:0.8;
+                font-family: filicudi-striped, sans-serif;
+                font-size:1.2vw;
+                line-height:1.8vw;
+                z-index:10000;
+            }
             #email{
                 position:absolute;
                 padding: 16px 20px;
@@ -59,7 +72,7 @@
                 color:white;
                 opacity:0.8;
                 font-family: 'Gugi', cursive;
-                font-size:1.2em;
+                font-size:1.2vw;
                 z-index:10000;
             }
             #email a{
@@ -90,9 +103,9 @@
                 position:absolute;
                 top:20px;
                 right:20px;
-                font-size:1.25vw;
+                font-size:1.2vw;
                 text-align: right;
-                line-height:5vh;
+                line-height:4.5vh;
                 color:black;
                 font-family: filicudi-striped, sans-serif;
                 font-weight: 400;
@@ -149,7 +162,7 @@
                 font-family: filicudi-striped, sans-serif;
                 font-weight: 400;
                 font-style: normal;
-/*                border: 10px white ridge;*/
+                /*                border: 10px white ridge;*/
             }
             .itemStady:hover{
                 opacity:1;
@@ -160,7 +173,6 @@
 
             .itemStady img{
                 width:40%;
-                /*                height:;*/
                 object-fit: cover;
             }
             .itemLyrics{
@@ -171,7 +183,6 @@
                 background:black;
                 color:white;
                 opacity:1;
-                /*                width:5vw;*/
                 height:4vh;
                 margin: 1vw 0px 0px 0.3vw;
                 font-size:1vw;
@@ -206,8 +217,9 @@
             }
             #container {
                 background:transparent;
-                background-image: url("logo1.png");
+                background-image: url("logo2.jpg");
                 background-repeat:no-repeat;
+                background-size: 750px 750px;
                 background-position: center;
                 position: absolute;
                 left: 50%;
@@ -311,7 +323,7 @@
 
         <div id="cool" onclick="coolfunction()">Something Cool</div>
         <div id="email"><a href="mailto:chen@newschool.edu">chen@newschool.edu</a></div>
-
+        <div id="projname"></div>
         <div id="demo"></div>
         <div id="moveup">
             <div class="texttrigger">
@@ -320,24 +332,80 @@
                 <span class="adj"></span> <span onclick="handleMain()">🏹Triggers</span>
                 <br>
                 <span class="adj">🈯️"Adjunct"</span> <span onclick="handleCEO()">CEO</span><br>
-                <span class="adj">👨‍💻"somewhat"</span> <span onclick="handleFront()">Frontend Designer</span>
+                <span class="adj">👨‍💻"featured"</span> <span onclick="handleFront()">Designer</span>
                 <br>
-                <span class="adj">🉑"Stylish"</span> <span onclick="handleSoft()">Software Engineer</span>
+                <span class="adj">🉑"somewhat"</span> <span onclick="handleSoft()">Designer</span>
                 <br>
-                <span class="adj">📈"Enthusiastic"</span> <span onclick="handleData()">Data Analytics</span>
+                <span class="adj">📈</span> <span onclick="handleData()">Machine Learning Enthusiastic</span>
             </div>
 
             <div class="itemLyrics" style="margin-left:1vw;">ZIJIA</div>
             <div class="itemLyrics">CHEN</div>
             <br>
+            <div id="part4">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+
+                <br>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"><img src="portasset/StadyBP.jpg"></div>
+                <br>
+
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+                <div class="itemStady"><img src="stadylogo.png"></div>
+
+            </div>
+
+            <br>
+
+            <div id="LyricsPart2">
+                <div class="itemLyrics" style="margin-left:1vw;">Told</div>
+                <div class="itemLyrics">you</div>
+                <div class="itemLyrics">not</div>
+                <div class="itemLyrics">to</div>
+                <div class="itemLyrics">worry</div>
+                <div class="itemLyrics">but</div>
+                <div class="itemLyrics">maybe</div>
+                <div class="itemLyrics">that's</div>
+                <div class="itemLyrics">a lie</div>
+            </div><br>
+
             <div id="part1">
-                <div class="item"><img src="portasset/book.png"></div>
-                <div class="item"><img src="portasset/meow.jpg"></div>
-                <div class="item"><img src="portasset/poster.png"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Personal Space powered by facial recognition <br>\n Skills: Javascript, API';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="https://www.iotworldtoday.com/files/2018/10/facial-rec-tec-877x432.jpg"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'NLP UNIVERSAL ENCODERS COMPARER <br>\n Skills: Javascript, Python, Natural Language Processing(NLP)';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/10/26015527/121.jpg"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Zombie game built with Unity3D';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="https://images.law.com/contrib/content/uploads/sites/390/2019/09/Walking-Dead-Zombies-Article-201909091840.jpg"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'FAKE NEWS 3D MOTION GRAPHICS';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="https://images.axios.com/LShbI5rZ2r4rCt3jerNYxkw2euE=/0x0:1920x1080/1920x1080/2018/10/21/1540129749559.jpg"></div>
+
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'IMPOSSIBLE BURGER  VS  BEEF BURGER INFOGRAPHICS <br>\n Skills: adobe illustrator, tableau';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="https://www.umamiburger.com/wp-content/uploads/2018/03/classicwoodbackgroundweb.jpg"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'MY CAT DONUT WEBVR SCENE <br>\n Skills: webvr, javascript'" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="http://static1.squarespace.com/static/5b179d99a2772c64cb22caa2/5b18fc0c0e2e721b4216acf6/5b20da30575d1fc23f4c66aa/1530099441040/catVR_820_461_compressed.jpg?format=1500w"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'ARE YOU CATAHOLIC?? <br>\n Skills: Vue.js , Vue-grid-layout.js';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="portasset/donut1.jpg"></div>
             </div>
             <br>
             <div id="LyricsPart1">
@@ -348,41 +416,106 @@
             </div>
             <br>
             <div id="part2">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Typography : Book Design';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="portasset/book.png"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Color Palette Generator';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="https://onextrapixel.com/wp-content/uploads/2017/12/color-theory.jpg"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'VR tour guide';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="portasset/vrfinal.png"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'NameCard Poster';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="portasset/poster.png"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Portfolio v1.0';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="portasset/meow.jpg"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'CSS-Loader';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="portasset/loader.gif"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Rotating Block';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="portasset/rotate-block.gif"></div>
             </div>
             <br>
-            <div id="LyricsPart2">
-                <div class="itemLyrics" style="margin-left:1vw;">you</div>
-                <div class="itemLyrics">should</div>
-                <div class="itemLyrics">see</div>
-                <div class="itemLyrics">me</div>
-                <div class="itemLyrics">in</div>
-                <div class="itemLyrics">a</div>
-                <div class="itemLyrics">crown</div>
+
+            <div id="LyricsPart5">
+                <div class="itemLyrics" style="margin-left:1vw;">MY</div>
+                <div class="itemLyrics">STRANGE</div>
+                <div class="itemLyrics">ADDICTION</div>
             </div>
             <br>
             <div id="part3">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Adversarial Examples for Silhouette-based gait recognition networks';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="portasset/gait.jpg"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Hospital data exploration';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       style="object-fit: contain;" src="portasset/Rplot02.png"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Generate number image from scratch using CNN and GAN';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       style="object-fit: contain;" src="portasset/cnngan.png"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Kernalized K-mean & predicting city location utilizing the distance between them';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="portasset/mapping.png"></div>
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Hand-Coded decision tree algorithm';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       style="object-fit: contain;" 
+                                       src="https://www.inbenta.com/wp-content/uploads/2017/10/Webp.net-resizeimage-9.jpg"></div>
                 <div class="item"></div>
                 <div class="item"></div>
             </div>
+            <br>            
+            <div id="LyricsPart4">
+                <div class="itemLyrics" style="margin-left:1vw;">When</div>
+                <div class="itemLyrics">we</div>
+                <div class="itemLyrics">all</div>
+                <div class="itemLyrics">fall</div>
+                <div class="itemLyrics">asleep,</div>
+                <div class="itemLyrics">where</div>
+                <div class="itemLyrics">do</div>
+                <div class="itemLyrics">we</div>
+                <div class="itemLyrics">go</div>
+                <div class="itemLyrics">?</div>
+            </div>
+
             <br>
+
+            <div id = "part5">
+                <br>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>                
+
+                <br>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>                
+
+            </div>
+            <br>
+
             <div id="LyricsPart3">
                 <div class="itemLyrics" style="margin-left:1vw;">Standing</div>
                 <div class="itemLyrics">there,</div>
@@ -396,86 +529,12 @@
                 <div class="itemLyrics">a</div>
                 <div class="itemLyrics">crime</div>
             </div>
-            <br>
-            <div id="part4">
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <br>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
 
-                <br>
 
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <br>
-                
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-                <div class="itemStady"><img src="stadylogo.png"></div>
-
-                <br>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <br>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                <div class="item" style="background:black; opacity:1"></div>
-                
-            </div>
-            <br>
-            <div id="LyricsPart4">
-                <div class="itemLyrics" style="margin-left:1vw;">MY</div>
-                <div class="itemLyrics">STRANGE</div>
-                <div class="itemLyrics">ADDICTION</div>
-            </div>
 
 
 
         </div>
-
-
-
 
 
         <script src='https://gist.github.com/mrdoob/838785/raw/a19a753b441d6ad41707c58f06dbe17f3470423c/RequestAnimationFrame.js'></script>

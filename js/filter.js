@@ -8,6 +8,8 @@ var part3 = document.getElementById('part3').querySelectorAll('.item')
 var part3Whole = document.getElementById('part3')
 var part4 = document.getElementById('part4').querySelectorAll('.item,.itemStady')
 var part4Whole = document.getElementById('part4')
+var part5 = document.getElementById('part5').querySelectorAll('.item,.itemStady')
+var part5Whole = document.getElementById('part5')
 var lyrics1 = document.getElementById('LyricsPart1').querySelectorAll('.item')
 var lyrics2 = document.getElementById('LyricsPart2').querySelectorAll('.item')
 var lyrics3 = document.getElementById('LyricsPart3').querySelectorAll('.item')
@@ -21,9 +23,8 @@ var allitem = [
     part1,part2,part3,part4,lyrics1,lyrics2,lyrics3,lyrics4
 ]
 
-console.log(part2 .length)
+console.log(allgrids.length)
 
-//console.log(allgrids.length)
 function handleMain(){
     if(localStorage.getItem('clicked')  == 'true'){        
         appearWhole()
@@ -111,17 +112,6 @@ function handleData(){
 }
 
 
-
-
-
-
-
-
-
-
-
-//methods
-
 function appearflex(part,i){
     setTimeout(function(){
         part[i].style.margin = '0 0 0 0'
@@ -169,8 +159,6 @@ function appearWhole(){
         }
         allgrids[timesrun1].style.display = 'inline-flex'
         allgrids[timesrun1].style.margin = '1vw -5px 0px 1vw'
-        //        allgrids[timesrun1].style.width = '3.2vw'
-//        allgrids[timesrun1].style.height = '4vh'
         timesrun1 += 1;
     }, (1000/(allgrids.length-1)))
     setTimeout(function(){demo.style.opacity = '0.8'},1050)
@@ -202,28 +190,10 @@ function disappear(){
 
     setTimeout(function(){
         demo.style.opacity = '0.8'  
+        demo.style.backgroundColor = 'white'
         console.log(timesrun1)}
                ,1050)
 }
-
-function generateArraytoSum(num){
-    var list = []
-    var listSum = 0
-    const arrSum = arr => arr.reduce((a,b) => a + b, 0)
-
-    while(listSum < num){
-        if(listSum < num-10){
-            list.push((Math.floor(Math.random()*10)))
-            listSum = arrSum(list)
-        }
-        else{
-            list.push(10)
-            listSum = num
-        }
-    }
-    return list
-}
-
 
 function generateArraytoSumFix(num,arrayLen){
     var list = []

@@ -37,6 +37,7 @@ function undoCool(){
     email.style.padding = '16px 20px'
     email.style.left = '16px'
     partcontainer.style.backgroundImage = "url('logo1.png')"
+    partcontainer.style.backgroundSize = "750px 137px"
     partcontainer.style.backgroundRepeat = 'no-repeat'
     partcontainer.style.backgroundPosition = 'center'
 //    man = true;
