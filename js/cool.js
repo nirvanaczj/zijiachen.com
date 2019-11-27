@@ -19,7 +19,7 @@ function coolfunction(){
     demo.style.opacity = '0.8'
     partcontainer.style.background = 'transparent'
     man = false;
-    TweenMax.to("#moveup", 1.5, { ease: Power4.easeOut, y: '0vh' })
+    TweenMax.to("#moveup", 2.5, { ease: Elastic.easeOut.config(1, 0.3), y: '0vh' })
 }
 
 // Elastic.easeOut.config(1, 0.3)

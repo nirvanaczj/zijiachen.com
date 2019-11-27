@@ -18,7 +18,13 @@
         <title>ZIJIA CHEN</title>
         <link rel="icon" href="https://i.imgur.com/quzCPZa.png" type="image/gif">
         <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">;
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <style>
+            .lb-close{
+                margin-right:30px;
+            }
+        </style>
         <style>
             @charset "UTF-8";
             @import url(https://fonts.googleapis.com/css?family=Quantico);
@@ -52,24 +58,28 @@
             }
             #projname{
                 position:absolute;
-/*                padding: 16px 20px;*/
-                cursor:pointer;
+                /*                padding: 16px 20px;*/
+                /*                cursor:pointer;*/
                 bottom:28px;
                 left:1vw;
                 color:black;
                 opacity:0.8;
-                font-family: filicudi-striped, sans-serif;
-                font-size:1.2vw;
-                line-height:1.8vw;
+                font-family: rig-solid-bold-fill, sans-serif;
+                font-size:1.4vw;
+                line-height:2vw;
                 z-index:10000;
             }
-            #theone{
-                transform: translate(0,-40vh);
-                margin:auto;
-                width:500px;
+            #statement{
                 position:absolute;
-                background:transparent;
-                height:auto;
+                width:100%;
+                text-align: center;
+                top:28px;
+                /*                margin:auto;*/
+                color:black;
+                font-family: rig-solid-bold-fill, sans-serif;
+                font-family: rig-solid-bold-reverse, sans-serif;
+                font-size:1.65vw;
+                line-height:1.4vw;
                 z-index:10000;
             }
             #email{
@@ -146,6 +156,7 @@
             }
             .item:hover{
                 opacity:1;
+                cursor:pointer;
             }
             .item:not(:hover){
                 opacity:0.6;
@@ -333,8 +344,9 @@
         <div id="cool" onclick="coolfunction()">Something Cool</div>
         <div id="email"><a href="mailto:chen@newschool.edu">chen@newschool.edu</a></div>
         <div id="projname"></div>
+        <div id="statement"></div>
+        <div id="centerdemo"></div>
         <div id="demo"></div>
-        <div id="theone"></div>
         <div id="moveup">
             <div class="texttrigger">
                 <span class="adj"></span> <span onclick="undoCool()">🔫Undo Cool</span>
@@ -361,7 +373,7 @@
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
-                <div class="item"><img src="portasset/StadyBP.jpg"></div>
+                <div class="item"><a href="portasset/StadyBP.jpg" data-lightbox="stadyBP"><img src="portasset/StadyBP.jpg"></a></div>
                 <br>
 
                 <div class="itemStady"><img src="portasset/stadylogo.png"></div>
@@ -388,38 +400,44 @@
 
             <div id="part1">
                 <div class="item"><img 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Personal Space powered by facial recognition <br>\n Skills: Javascript, API';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';"
+
+                                       onmouseover="aceOver()"
+                                       onmouseout="aceOut()"
                                        onclick = "window.open('https://ace-98.glitch.me')"
                                        src="https://www.iotworldtoday.com/files/2018/10/facial-rec-tec-877x432.jpg"></div>
-                <div class="item"><img 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'NLP UNIVERSAL ENCODERS COMPARER <br>\n Skills: Javascript, Python, Natural Language Processing(NLP)';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       onclick = "window.open('https://encoder-compare.glitch.me/')"
+                <div class="item"><img
+                                       onmouseover="NLPOver();
+                    document.getElementById('statement').innerHTML = 'so, how do machine understand us?';"
+                                       onmouseout="NLPOut();
+                    document.getElementById('statement').innerHTML = '';"
+                                       onclick = "window.open('https://encoder-compare.glitch.me')"
                                        src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/10/26015527/121.jpg"></div>
+               
                 <div class="item"><img 
+                                       onclick = "window.open('https://donutprototype.glitch.me')"
+                                       onmouseover="document.getElementById('projname').innerHTML = 'MY CAT DONUT WEBVR SCENE <br>\n Skills: webvr, javascript'
+                    document.getElementById('statement').innerHTML = 'A must-go within this site';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';
+                    document.getElementById('statement').innerHTML = '';"            
+                                       src="http://static1.squarespace.com/static/5b179d99a2772c64cb22caa2/5b18fc0c0e2e721b4216acf6/5b20da30575d1fc23f4c66aa/1530099441040/catVR_820_461_compressed.jpg?format=1500w"></div>
+                <div class="item"><img 
+                                       onclick = "window.open('https://cataholic.glitch.me')"
+                                       onmouseover="document.getElementById('projname').innerHTML = 'A website for cat lover <br>\n Skills: Vue.js , Vue-grid-layout.js';
+                    document.getElementById('statement').innerHTML = 'ARE YOU A CATAHOLIC??';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';
+                    document.getElementById('statement').innerHTML = '';" 
+                                       src="portasset/donut1.jpg"></div>
+                 <div class="item"><img 
                                        onmouseover="document.getElementById('projname').innerHTML = 'Zombie game built with Unity3D';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       onclick = "document.getElementById('theone').innerHTML = ''"
                                        src="https://images.law.com/contrib/content/uploads/sites/390/2019/09/Walking-Dead-Zombies-Article-201909091840.jpg"></div>
-                <div class="item"><img 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'FAKE NEWS 3D MOTION GRAPHICS';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       onclick = "window.open('portasset/infoGraphics.png')"                                       src="https://images.axios.com/LShbI5rZ2r4rCt3jerNYxkw2euE=/0x0:1920x1080/1920x1080/2018/10/21/1540129749559.jpg"></div>
 
-                <div class="item"><img 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'IMPOSSIBLE BURGER  VS  BEEF BURGER INFOGRAPHICS <br>\n Skills: adobe illustrator, tableau';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="portasset/impossible.jpg"></div>
-                <div class="item"><img 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'MY CAT DONUT WEBVR SCENE <br>\n Skills: webvr, javascript'" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       onclick = "window.open('https://donutprototype.glitch.me/')"                                       src="http://static1.squarespace.com/static/5b179d99a2772c64cb22caa2/5b18fc0c0e2e721b4216acf6/5b20da30575d1fc23f4c66aa/1530099441040/catVR_820_461_compressed.jpg?format=1500w"></div>
-                <div class="item"><img 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'ARE YOU CATAHOLIC?? <br>\n Skills: Vue.js , Vue-grid-layout.js';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       onclick = "window.open('http://cataholic.glitch.me/')"
-                                       src="portasset/donut1.jpg"></div>
+                <div class="item"><a href="portasset/infoGraphics.png" data-lightbox="impossible">
+                    <img 
+                         onmouseover="document.getElementById('projname').innerHTML = 'IMPOSSIBLE BURGER  VS  BEEF BURGER INFOGRAPHICS <br>\n Skills: adobe illustrator, tableau';" 
+                         onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                         src="portasset/impossible.jpg"></a></div>
+
             </div>
             <br>
             <div id="LyricsPart1">
@@ -431,14 +449,23 @@
             <br>
             <div id="part2">
                 <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'FAKE NEWS 3D MOTION GRAPHICS';
+                    document.getElementById('statement').innerHTML = 'You never know when its going become real';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';
+                    document.getElementById('statement').innerHTML = '';"                                       
+                                       src="https://images.axios.com/LShbI5rZ2r4rCt3jerNYxkw2euE=/0x0:1920x1080/1920x1080/2018/10/21/1540129749559.jpg"></div>
+                <div class="item"><img 
+                                       onclick = "window.open('https://bookdesign.glitch.me')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Typography : Book Design';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/book.png"></div>
                 <div class="item"><img 
+                                       onclick = "window.open('https://palettes.design')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Color Palette Generator';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="https://onextrapixel.com/wp-content/uploads/2017/12/color-theory.jpg"></div>
                 <div class="item"><img 
+                                       onclick = "window.open('https://webvrgroup.glitch.me')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'VR tour guide';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/vrfinal.png"></div>
@@ -447,17 +474,22 @@
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/poster.png"></div>
                 <div class="item"><img 
+                                       onclick = "window.open('https://www.zijiachen.com/v1.1/portfolio')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Portfolio v1.0';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/meow.jpg"></div>
-                <div class="item"><img 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'CSS-Loader';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="portasset/loader.gif"></div>
-                <div class="item"><img 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Rotating Block';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="portasset/rotate-block.gif"></div>
+                <!--
+
+<div class="item"><img 
+onmouseover="document.getElementById('projname').innerHTML = 'CSS-Loader';" 
+onmouseout = "document.getElementById('projname').innerHTML = '';" 
+src="portasset/loader.gif"></div>
+<div class="item"><img 
+onmouseover="document.getElementById('projname').innerHTML = 'Rotating Block';" 
+onmouseout = "document.getElementById('projname').innerHTML = '';" 
+src="portasset/rotate-block.gif"></div>
+-->
+
             </div>
             <br>
 
@@ -469,6 +501,7 @@
             <br>
             <div id="part3">
                 <div class="item"><img 
+                                       onclick="window.open('https://github.com/nirvanaczj/GaitRecFooler/blob/master/Project%20Report.pdf')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Adversarial Examples for Silhouette-based gait recognition networks';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/gait.jpg"></div>
@@ -490,7 +523,6 @@
                                        style="object-fit: contain;" 
                                        src="https://www.inbenta.com/wp-content/uploads/2017/10/Webp.net-resizeimage-9.jpg"></div>
                 <div class="item"></div>
-                <div class="item"></div>
             </div>
             <br>            
             <div id="LyricsPart4">
@@ -510,15 +542,8 @@
 
             <div id = "part5">
                 <br>
+                <div class="item"><img onclick="https://skfb.ly/6OKBu" src=""></div>
                 <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>                
-
-                <br>
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
@@ -556,10 +581,16 @@
         <script src='https://raw.github.com/mrdoob/stats.js/master/build/stats.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+        <script>
+            lightbox.option({
+
+            })
+        </script>
         <script  src="js/index.js"></script>
         <script  src="js/type.js"></script>
         <script  src="js/cool.js"></script>
         <script  src="js/filter.js"></script>
-        <script  src="js/theone.js"></script>
+        <script  src="js/mouse.js"></script>
     </body>
 </html>
