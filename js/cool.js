@@ -19,10 +19,10 @@ function coolfunction(){
     demo.style.opacity = '0.8'
     partcontainer.style.background = 'transparent'
     man = false;
-    TweenMax.to("#moveup", 2.5, { ease:  Elastic.easeOut.config(1, 0.3), y: '0vh' })
+    TweenMax.to("#moveup", 1.5, { ease: Power4.easeOut, y: '0vh' })
 }
 
-
+// Elastic.easeOut.config(1, 0.3)
 
 function undoCool(){
     appearWhole()
@@ -36,8 +36,8 @@ function undoCool(){
     email.style.right = 'auto'
     email.style.padding = '16px 20px'
     email.style.left = '16px'
-    partcontainer.style.backgroundImage = "url('logo1.png')"
-    partcontainer.style.backgroundSize = "750px 137px"
+    partcontainer.style.backgroundImage = "url('portasset/logo2.jpg')"
+    partcontainer.style.backgroundSize = "750px 750px"
     partcontainer.style.backgroundRepeat = 'no-repeat'
     partcontainer.style.backgroundPosition = 'center'
 //    man = true;
