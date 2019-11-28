@@ -21,13 +21,11 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
         <style>
+            @charset "UTF-8";
+            @import url(https://fonts.googleapis.com/css?family=Quantico);
             .lb-close{
                 margin-right:30px;
             }
-        </style>
-        <style>
-            @charset "UTF-8";
-            @import url(https://fonts.googleapis.com/css?family=Quantico);
             html, body {
                 background:#010101;
                 height:100%;}
@@ -139,7 +137,7 @@
                 color:black;
                 opacity:0.6;
                 transition-property: opacity;
-                transition-duration:0.5s;
+                transition-duration:1s;
                 width:3.2vw;
                 height:4vh;
                 margin: 1vw -5px 0px 1vw;
@@ -148,6 +146,7 @@
                 font-weight: 400;
                 font-style: normal;
                 padding:0;
+/*                display: none*/
             }
             .item img{
                 width:100%;
@@ -174,7 +173,7 @@
                 opacity:1;
                 opacity:0.5;
                 transition-property: opacity;
-                transition-duration:1.5s;
+                transition-duration:1s;
                 width:3.2vw;
                 height:4vh;
                 margin: 1vw -5px 0px 1vw;
@@ -365,22 +364,24 @@
             <div class="itemLyrics">CHEN</div>
             <br>
             <div id="part4">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+                <div class="itemStady tutoringsession" style="cursor:pointer;"><img src="portasset/stadylogo.png" onclick="window.open('https://stady-trial-room.glitch.me')"></div>
+<!--                <div class="itemStady"><img src="portasset/UX.png" onclick="window.open('https://i.imgur.com/Vi6Vv4l.png')"></div>-->
+
 
                 <br>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
+                <div class="itemStady tutoringsession" style="cursor:pointer;"><img src="portasset/stadylogo.png" onclick="window.open('https://stady-trial-room.glitch.me')"></div>
+                <div class="itemStady tutoringsession" style="cursor:pointer;"><img src="portasset/stadylogo.png" onclick="window.open('https://stady-trial-room.glitch.me')"></div>
+                
+                <br>
+                <div class="item"><img src="portasset/UX.png" onclick="window.open('https://i.imgur.com/Vi6Vv4l.png')"></div>
+                <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-93a190d30980.gif?v=1574916443659" data-lightbox="ui"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-93a190d30980.gif?v=1574916443659"></a></div>
                 <div class="item"><a href="portasset/StadyBP.jpg" data-lightbox="stadyBP"><img src="portasset/StadyBP.jpg"></a></div>
                 <br>
+                <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"><img src="portasset/stadylogo.png"></div>
+                <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"><img src="portasset/stadylogo.png"></div>
+                <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"><img src="portasset/stadylogo.png"></div>
+                <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"><img src="portasset/stadylogo.png"></div>
 
-                <div class="itemStady"><img src="portasset/stadylogo.png"></div>
-                <div class="itemStady"><img src="portasset/stadylogo.png"></div>
-                <div class="itemStady"><img src="portasset/stadylogo.png"></div>
-                <div class="itemStady"><img src="portasset/stadylogo.png"></div>
-                <div class="itemStady"><img src="portasset/stadylogo.png"></div>
 
             </div>
 
@@ -448,12 +449,12 @@
             </div>
             <br>
             <div id="part2">
-                <div class="item"><img 
+                <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-971eb3b3698f.gif?v=1574908278199" data-lightbox="3DMG"><img 
                                        onmouseover="document.getElementById('projname').innerHTML = 'FAKE NEWS 3D MOTION GRAPHICS';
                     document.getElementById('statement').innerHTML = 'You never know when its going become real';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';
                     document.getElementById('statement').innerHTML = '';"                                       
-                                       src="https://images.axios.com/LShbI5rZ2r4rCt3jerNYxkw2euE=/0x0:1920x1080/1920x1080/2018/10/21/1540129749559.jpg"></div>
+                                       src="https://images.axios.com/LShbI5rZ2r4rCt3jerNYxkw2euE=/0x0:1920x1080/1920x1080/2018/10/21/1540129749559.jpg"></a></div>
                 <div class="item"><img 
                                        onclick = "window.open('https://bookdesign.glitch.me')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Typography : Book Design';" 
@@ -465,14 +466,15 @@
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="https://onextrapixel.com/wp-content/uploads/2017/12/color-theory.jpg"></div>
                 <div class="item"><img 
-                                       onclick = "window.open('https://webvrgroup.glitch.me')"
+                                       onclick = "window.open('https://vrtour.glitch.me/')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'VR tour guide';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/vrfinal.png"></div>
-                <div class="item"><img 
+                
+                <div class="item"><a href="portasset/poster.png" data-lightbox="NameCard"><img 
                                        onmouseover="document.getElementById('projname').innerHTML = 'NameCard Poster';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="portasset/poster.png"></div>
+                                       src="portasset/poster.png"></a></div>
                 <div class="item"><img 
                                        onclick = "window.open('https://www.zijiachen.com/v1.1/portfolio')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Portfolio v1.0';" 
@@ -506,24 +508,34 @@ src="portasset/rotate-block.gif"></div>
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/gait.jpg"></div>
                 <div class="item"><img 
+                                       onclick="window.open('portasset/Rplot.html')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Hospital data exploration';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        style="object-fit: contain;" src="portasset/Rplot02.png"></div>
                 <div class="item"><img 
+                                       onclick="window.open('portasset/CNNGAN.html')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Generate number image from scratch using CNN and GAN';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        style="object-fit: contain;" src="portasset/cnngan.png"></div>
                 <div class="item"><img 
+                                       onclick="window.open('portasset/MAPPING.html')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Kernalized K-mean & predicting city location utilizing the distance between them';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/mapping.png"></div>
                 <div class="item"><img 
+                                       onclick="window.open('portasset/ExamScoreRegression.html')"
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Exam score regression analysis';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       style="object-fit: contain;" 
+                                       src="https://image.freepik.com/free-vector/online-exam-checklist-pencil-taking-test-choosing-answer-questionnaire-form-education-concept-vector-illustration_100456-102.jpg"></div>
+                </div>
+                <div class="item"><img 
+                                       onclick="window.open('portasset/ML_hw1.html')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Hand-Coded decision tree algorithm';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        style="object-fit: contain;" 
                                        src="https://www.inbenta.com/wp-content/uploads/2017/10/Webp.net-resizeimage-9.jpg"></div>
-                <div class="item"></div>
-            </div>
+                
             <br>            
             <div id="LyricsPart4">
                 <div class="itemLyrics" style="margin-left:1vw;">When</div>
@@ -542,15 +554,13 @@ src="portasset/rotate-block.gif"></div>
 
             <div id = "part5">
                 <br>
-                <div class="item"><img onclick="https://skfb.ly/6OKBu" src=""></div>
+                <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-1-b7e8e0c05a93.gif?v=1574404464002" data-lightbox="billardanim"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-1-b7e8e0c05a93.gif?v=1574404464002"></a></div>
+                <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-1a0d02643c9f.gif?v=1574205602851" data-lightbox="iceCream"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-1a0d02643c9f.gif?v=1574205602851"></a></div>
+                <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-66c67521bb05.gif?v=1574910935923" data-lightbox="can3D"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-66c67521bb05.gif?v=1574910935923"></a></div>
+                <div class="item"><a href="portasset/gun3D.gif" data-lightbox="gun3D"><img src="portasset/gun3D.gif"></a></div>
+                <div class="item"><a href="portasset/minion.gif" data-lightbox="minion"><img src="portasset/minion.gif"></a></div>
+<!--                <div class="item"><a href="portasset/phone3d.png" data-lightbox="phone"><img src="portasset/phone3d.png"></a></div>-->
                 <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>                
 
             </div>
             <br>
@@ -581,7 +591,7 @@ src="portasset/rotate-block.gif"></div>
         <script src='https://raw.github.com/mrdoob/stats.js/master/build/stats.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+        <script src="js/lightbox.js"></script>
         <script>
             lightbox.option({
 

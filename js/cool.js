@@ -43,3 +43,14 @@ function undoCool(){
 //    man = true;
     TweenMax.to("#moveup", 2.5, { ease: Power4.easeOut, y: '110vh' })
 }
+
+
+var startTSnum = 0
+setInterval(function(){
+var tsession = document.querySelectorAll('.tutoringsession')
+startTSnum++
+for(let i = 0;i < tsession.length; i++){
+var newColor = `hsl(${startTSnum}, 100%, 50%)`
+tsession[i].style.background = newColor
+}
+},1000/60)
