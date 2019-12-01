@@ -9,6 +9,8 @@ var donut = document.getElementById('donutvr')
 var donutroom = document.getElementById('donutroom')
 var zombieunity = document.getElementById('zombieunity')
 var fakenews = document.getElementById('fakenews')
+var gait = document.getElementById('gait') 
+
 function coolfunction(){
 
     cool.style.display = 'none'
@@ -74,6 +76,19 @@ setInterval(function(){
 }
             ,1000)
 
+var clickgait = false;
+
+setInterval(function(){
+    if(clickgait == false){
+        gait.style.objectFit = "contain"
+        gait.src="portasset/click.png"
+        clickgait = true}
+    else if (clickgait == true){
+        gait.style.objectFit = "cover"
+        gait.src="portasset/gait.jpg"
+        clickgait = false}
+}
+            ,1000)
 
 var clickpngdonut = true;
 
