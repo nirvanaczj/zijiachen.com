@@ -35,18 +35,25 @@ function handleMain(){
     }
 }
 
+
 function handleCEO(){
     disappear()
     setTimeout(function(){
-        for( i = 0 ; i < part4.length ; i++) {
-            appear(part4,i)
-        }
         moveup.style.display = 'flex'
         moveup.style.justifyContent = 'center'
         moveup.style.alignItems = 'center'
+        part3Whole.style.display = 'none'
+        part2Whole.style.display = 'none'
+        part4Whole.style.display = 'flex'
+        part1Whole.style.display = 'none'
+        part4Whole.style.width = '100%'
+        part4Whole.style.height = 'auto'
+        for( i = 0 ; i < part4.length ; i++) {
+            appearflex(part4,i)
+            part4[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
+        }
     },1100)
 }
-
 
 
 
