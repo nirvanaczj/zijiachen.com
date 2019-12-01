@@ -75,6 +75,7 @@ function handleFront(){
             part1[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
         }
     },1100)
+    
 }
 
 
