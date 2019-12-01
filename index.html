@@ -370,11 +370,11 @@
                 <br>
                 <span class="adj"></span> <span onclick="handleMain()">🏹Triggers</span>
                 <br>
-                <span class="adj">🈯️"Adjunct"</span> <span onclick="handleCEO()">CEO</span><br>
                 <span class="adj">👨‍💻"featured"</span> <span onclick="handleFront()">Designer</span>
                 <br>
                 <span class="adj">🉑"somewhat"</span> <span onclick="handleSoft()">Designer</span>
                 <br>
+                <span class="adj">🈯️"Adjunct CEO" of </span> <span onclick="handleCEO()">Stady</span><br>
                 <span class="adj">📈</span> <span onclick="handleData()">Machine Learning Enthusiastic</span>
             </div>
 
@@ -480,12 +480,13 @@
                                        src="portasset/donut1.jpg"></div>
                 <div class="item"><img 
                                        id="zombieunity"
-                                       onmouseover = "document.getElementById('projname').innerHTML = 'Zombie game built with Unity3D';
-    document.getElementById('zombieunity').src='portasset/inprog.png';
-    document.getElementById('zombieunity').style.objectFit = 'contain'"
-                                       onmouseout = "document.getElementById('zombieunity').src='portasset/zombie.jpg'; 
-    document.getElementById('zombieunity').style.objectFit = 'cover'
-    document.getElementById('projname').innerHTML = ''"
+                                       onmouseover = "document.getElementById('zombieunity').style.objectFit = 'contain'
+                                                      document.getElementById('projname').innerHTML = 'Zombie game built with Unity3D';
+                                                      document.getElementById('zombieunity').src='portasset/inprog.png';"
+                                       onmouseout = "
+                                                        document.getElementById('zombieunity').style.objectFit = 'cover'
+                                                        document.getElementById('zombieunity').src='portasset/zombie.jpg'; 
+                                                        document.getElementById('projname').innerHTML = ''"
                                        style="background: #3B52A2"
                                        src="https://images.law.com/contrib/content/uploads/sites/390/2019/09/Walking-Dead-Zombies-Article-201909091840.jpg"></div>
                 
@@ -501,7 +502,7 @@
             </div>
             <br>
             <div id="part2">
-               <div class="item"><a href="portasset/infoGraphics.png" data-lightbox="impossible">
+               <div class="item"><a href="portasset/infoGraphics.png" target="_blank">
                     <img 
                          onmouseover="document.getElementById('projname').innerHTML = 'IMPOSSIBLE BURGER  VS  BEEF BURGER INFOGRAPHICS <br>\n Skills: adobe illustrator, tableau';" 
                          onmouseout = "document.getElementById('projname').innerHTML = '';" 
@@ -524,13 +525,14 @@
                  <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-971eb3b3698f.gif?v=1574908278199" data-lightbox="3DMG"><img 
                                        id = "fakenews"
                                        style="background: #3B52A2"
-                                       onmouseover = "document.getElementById('projname').innerHTML = 'Zombie game built with Unity3D';
-    document.getElementById('fakenews').src='portasset/inprog.png';
-    document.getElementById('fakenews').style.objectFit = 'contain'"
-                                       onmouseout = "document.getElementById('fakenews').src='portasset/zombie.jpg'; 
-    document.getElementById('fakenews').style.objectFit = 'cover'
+                                       onmouseover = "document.getElementById('projname').innerHTML = 'Fake news 3d motion graphics';
+                     document.getElementById('fakenews').style.objectFit = 'contain'
+    document.getElementById('fakenews').src='portasset/inprog.png';"
+                                       onmouseout = "document.getElementById('fakenews').style.objectFit = 'cover'
+                     document.getElementById('fakenews').src='portasset/fakenews.jpg'; 
     document.getElementById('projname').innerHTML = ''"                                       
                                        src="https://images.axios.com/LShbI5rZ2r4rCt3jerNYxkw2euE=/0x0:1920x1080/1920x1080/2018/10/21/1540129749559.jpg"></a></div>      
+                
                 <div class="item"><img 
                                        onclick = "window.open('https://bookdesign.glitch.me')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Typography : Book Design';" 
@@ -560,14 +562,9 @@ src="portasset/rotate-block.gif"></div>
             <div id="part3">
                 <div class="item"><img 
                                        onclick="window.open('https://github.com/nirvanaczj/GaitRecFooler/blob/master/Project%20Report.pdf')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Adversarial Examples for Silhouette-based gait recognition networks';" 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Research on Adversarial Examples for Silhouette-based gait recognition networks';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/gait.jpg"></div>
-                <div class="item"><img 
-                                       onclick="window.open('portasset/Rplot.html')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Hospital data exploration';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       style="object-fit: contain;" src="portasset/Rplot02.png"></div>
                 <div class="item"><img 
                                        onclick="window.open('portasset/CNNGAN.html')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Generate number image from scratch using CNN and GAN';" 
@@ -578,6 +575,11 @@ src="portasset/rotate-block.gif"></div>
                                        onmouseover="document.getElementById('projname').innerHTML = 'Kernalized K-mean & predicting city location utilizing the distance between them';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/mapping.png"></div>
+                <div class="item"><img 
+                       onclick="window.open('portasset/Rplot.html')"
+                       onmouseover="document.getElementById('projname').innerHTML = 'Hospital data exploration';" 
+                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                       style="object-fit: contain;" src="portasset/Rplot02.png"></div>
                 <div class="item"><img 
                                        onclick="window.open('portasset/ExamScoreRegression.html')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Exam score regression analysis';" 

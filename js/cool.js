@@ -64,12 +64,12 @@ var clickpng = false;
 
 setInterval(function(){
     if(clickpng == false){
-        ace98.src="portasset/click.png"
         ace98.style.objectFit = "contain"
+        ace98.src="portasset/click.png"
         clickpng = true}
     else if (clickpng == true){
-        ace98.src="portasset/fac-rec.jpg"
         ace98.style.objectFit = "cover"
+        ace98.src="portasset/fac-rec.jpg"
         clickpng = false}
 }
             ,1000)
@@ -79,12 +79,12 @@ var clickpngdonut = true;
 
 setInterval(function(){
     if(clickpngdonut == false){
-        donut.src="portasset/donut.png"
         donut.style.objectFit = "contain"
+        donut.src="portasset/donut.png"
         clickpngdonut = true}
     else if (clickpngdonut == true){
-        donut.src="portasset/donutvr.jpg"
         donut.style.objectFit = "cover"
+        donut.src="portasset/donutvr.jpg"
         clickpngdonut = false}
 }
             ,1000)
@@ -93,59 +93,19 @@ var clickpngdonutroom = true;
 
 setInterval(function(){
     if(clickpngdonutroom == false){
-        donutroom.src="portasset/donutroom.png"
         donutroom.style.objectFit = "contain"
+        donutroom.src="portasset/donutroom.png"
         clickpngdonutroom = true}
     else if (clickpngdonutroom == true){
-        donutroom.src="portasset/vrroom.png"
         donutroom.style.objectFit = "cover"
+        donutroom.src="portasset/vrroom.png"
         clickpngdonutroom = false}
 }
             ,1000)
 
 
-//var clickpngunity = true;
-//
-//setInterval(function(){
-//    if(clickpngdonutroom == false){
-//    zombieunity.src="portasset/inprog.png"
-//    zombieunity.style.objectFit = "contain"
-//    clickpngunity = true}
-//    else if (clickpngdonutroom == true){
-//    zombieunity.src="portasset/zombie.jpg"
-//    zombieunity.style.objectFit = "cover"
-//    clickpngunity = false}
-//    }
-//,2500)
-//
-//var clickpngfake = true;
-//
-//setInterval(function(){
-//    if(clickpngfake == false){
-//    fakenews.src="portasset/inprog.png"
-//    fakenews.style.objectFit = "contain"
-//    clickpngfake = true}
-//    else if (clickpngfake == true){
-//    fakenews.src="portasset/fakenews.jpg"
-//    fakenews.style.objectFit = "cover"
-//    clickpngfake = false}
-//    }
-//,2500)
 
-zombieunity.addEventListener('onmouseover',function(){
-    document.getElementById('projname').innerHTML = 'Zombie game built with Unity3D';
-    document.getElementById('zombieunity').src="portasset/inprog.png";
-    document.getElementById('zombieunity').style.objectFit = "contain"})
-fakenews.addEventListener('onmouseover',function(){
-    fakenews.src="portasset/inprog.png";
-    fakenews.style.objectFit = "contain"})
-zombieunity.addEventListener('onmouseout',function(){
-    zombieunity.src="portasset/zombie.jpg"; 
-    zombieunity.style.objectFit = "cover"
-    document.getElementById('projname').innerHTML = ''})
-fakenews.addEventListener('onmouseout',function(){
-    fakenews.src="portasset/fakenews.jpg" ;
-    fakenews.style.objectFit = "cover"})
+
 
 var startTSnumIntro = 100
 setInterval(function(){
