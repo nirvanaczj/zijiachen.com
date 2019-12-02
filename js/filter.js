@@ -15,9 +15,13 @@ var lyrics2 = document.getElementById('LyricsPart2').querySelectorAll('.item')
 var lyrics3 = document.getElementById('LyricsPart3').querySelectorAll('.item')
 var lyrics4 = document.getElementById('LyricsPart4').querySelectorAll('.item')
 var itemsArray = Array.prototype.slice.call(document.getElementsByClassName('item'))
+var itemsClickArray = Array.prototype.slice.call(document.getElementsByClassName('itemClick'))
 var itemLyricsArray = Array.prototype.slice.call(document.getElementsByClassName('itemLyrics'))
 var stadyLogo = Array.prototype.slice.call((document.getElementsByClassName('itemStady')))
+var part1itemClick = document.getElementById('part1').querySelectorAll('.itemClick')
+var part3itemClick = document.getElementById('part3').querySelectorAll('.itemClick')
 var allgrids = itemsArray.concat(itemLyricsArray).concat(stadyLogo)
+
 
 var allitem = [
     part1,part2,part3,part4,lyrics1,lyrics2,lyrics3,lyrics4
@@ -132,13 +136,7 @@ function appearflex(part,i){
         //        part[i].style.marginLeft = `${part[i].style.marginLeft.slice(0,-2)*2}px`
     },i*50)
 }
-function appear(part,i){
-    setTimeout(function(){
-        part[i].style.display = 'inline-flex'
-        //        part[i].style.transform = 'scale(2,2)'
-        //        part[i].style.marginLeft = `${part[i].style.marginLeft.slice(0,-2)*2}px`
-    },i*50)
-}
+
 function appearWhole(){
     part1Whole.style.display = 'inline'
     part2Whole.style.display = 'inline'
@@ -173,6 +171,7 @@ function appearWhole(){
     setTimeout(function(){demo.style.opacity = '0.8'},1050)
 }
 function disappear(){
+    StopFunction()
     localStorage.setItem('clicked','true')
     var timesRun = 0
     var interval = setInterval(function(){

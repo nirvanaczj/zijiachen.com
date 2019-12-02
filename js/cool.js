@@ -5,11 +5,15 @@ var moveup = document.querySelector('#moveup')
 var partcontainer = document.querySelector('#container')
 var email = document.querySelector('#email')
 var ace98 = document.getElementById('ace-98')
+var ace98click = document.getElementById('ace-98click')
 var donut = document.getElementById('donutvr')
 var donutroom = document.getElementById('donutroom')
+var donutclick = document.getElementById('donutvrclick')
+var donutroomclick = document.getElementById('donutroomclick')
 var zombieunity = document.getElementById('zombieunity')
 var fakenews = document.getElementById('fakenews')
 var gait = document.getElementById('gait') 
+var gaitclick = document.getElementById('gaitclick') 
 
 function coolfunction(){
 
@@ -25,6 +29,7 @@ function coolfunction(){
     demo.style.backgroundColor = 'white'
     demo.style.opacity = '0.8'
     partcontainer.style.background = 'transparent'
+//    partcontainer.style.display = 'none'
     man = false;
     TweenMax.to("#moveup", 2.5, { ease: Elastic.easeOut.config(1, 0.3), y: '0vh' })
 }
@@ -43,6 +48,7 @@ function undoCool(){
     email.style.right = 'auto'
     email.style.padding = '16px 20px'
     email.style.left = '16px'
+//    partcontainer.style.display = 'block'
     partcontainer.style.backgroundImage = "url('portasset/logo2.jpg')"
     partcontainer.style.backgroundSize = "750px 750px"
     partcontainer.style.backgroundRepeat = 'no-repeat'
@@ -64,59 +70,59 @@ setInterval(function(){
 
 var clickpng = false;
 
-setInterval(function(){
+var myclickpng = setInterval(function(){
     if(clickpng == false){
-        ace98.style.objectFit = "contain"
-        ace98.src="portasset/click.png"
+        ace98.style.display = "none"
+        ace98click.style.display = "inline-block"
         clickpng = true}
     else if (clickpng == true){
-        ace98.style.objectFit = "cover"
-        ace98.src="portasset/fac-rec.jpg"
+        ace98.style.display = "inline-block"
+        ace98click.style.display = "none"
         clickpng = false}
 }
-            ,1000)
+                             ,1000)
 
 var clickgait = false;
 
-setInterval(function(){
+var myclickgait = setInterval(function(){
     if(clickgait == false){
-        gait.style.objectFit = "contain"
-        gait.src="portasset/click.png"
+        gait.style.display = "none"
+        gaitclick.style.display = "inline-block"
         clickgait = true}
     else if (clickgait == true){
-        gait.style.objectFit = "cover"
-        gait.src="portasset/gait.jpg"
+        gait.style.display = "inline-block"
+        gaitclick.style.display = "none"
         clickgait = false}
 }
-            ,1000)
+                              ,1000)
 
 var clickpngdonut = true;
 
-setInterval(function(){
+var myclickdonut = setInterval(function(){
     if(clickpngdonut == false){
-        donut.style.objectFit = "contain"
-        donut.src="portasset/donut.png"
+        donut.style.display = "none"
+        donutclick.style.display = "inline-block"
         clickpngdonut = true}
     else if (clickpngdonut == true){
-        donut.style.objectFit = "cover"
-        donut.src="portasset/donutvr.jpg"
+        donut.style.display = "inline-block"
+        donutclick.style.display = "none"
         clickpngdonut = false}
 }
-            ,1000)
+                               ,1000)
 
 var clickpngdonutroom = true;
 
-setInterval(function(){
+var myclickdonutroom = setInterval(function(){
     if(clickpngdonutroom == false){
-        donutroom.style.objectFit = "contain"
-        donutroom.src="portasset/donutroom.png"
+        donutroom.style.display = "none"
+        donutroomclick.style.display = "inline-block"
         clickpngdonutroom = true}
     else if (clickpngdonutroom == true){
-        donutroom.style.objectFit = "cover"
-        donutroom.src="portasset/vrroom.png"
+        donutroom.style.display = "inline-block"
+        donutroomclick.style.display = "none"
         clickpngdonutroom = false}
 }
-            ,1000)
+                                   ,1000)
 
 
 
@@ -130,3 +136,19 @@ setInterval(function(){
     introvid.style.background = newColor
 }
             ,1000/60)
+
+
+function StopFunction() {
+    donutroom.style.display = "inline-block"
+    donutroomclick.style.display = "none"
+    donut.style.display = "inline-block"
+    donutclick.style.display = "none"
+    gait.style.display = "inline-block"
+    gaitclick.style.display = "none"
+    ace98.style.display = "inline-block"
+    ace98click.style.display = "none"
+    clearInterval(myclickdonutroom);
+    clearInterval(myclickdonut);
+    clearInterval(myclickpng);
+    clearInterval(myclickgait);
+}

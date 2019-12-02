@@ -165,6 +165,7 @@
                 padding:0;
                 /*                display: none*/
             }
+            
             .item img{
                 width:100%;
                 height:100%;
@@ -175,6 +176,39 @@
                 cursor:pointer;
             }
             .item:not(:hover){
+                opacity:0.6;
+            }
+            .itemClick{
+                display:inline-block;
+                line-height:2vw;
+                text-align: center;
+                /* display:none;*/
+                background:white;
+                color:black;
+                opacity:0.6;
+                transition-property: opacity;
+                transition-duration:1s;
+                width:3.2vw;
+                height:4vh;
+                margin: 1vw -5px 0px 1vw;
+                font-size:1vw;
+                font-family: filicudi-striped, sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                padding:0;
+                /*                display: none*/
+            }
+            
+            .itemClick img{
+                width:100%;
+                height:100%;
+                object-fit: cover;
+            }
+            .itemClick:hover{
+                opacity:1;
+                cursor:pointer;
+            }
+            .itemClick:not(:hover){
                 opacity:0.6;
             }
             .itemStady{
@@ -328,6 +362,7 @@
             * {
                 box-sizing: border-box;
             }
+
         </style>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     </head>
@@ -381,13 +416,12 @@
             <div class="itemLyrics" style="margin-left:1vw;">ZIJIA</div>
             <div class="itemLyrics">CHEN</div>
             <br>
-            <div class="item"><img style="background: black ; object-fit:contain; padding:0 10px;" onclick = "document.getElementById('centerdemo').style.display = 'block';document.getElementById('introvideoiframe').src='https://www.youtube.com/embed/vpTZjmf-7h0'" id = "introvid" src="portasset/intro.png"></div><br>
+            
             <div id="part4">
 <!--                <div class="itemStady tutoringsession" style="cursor:pointer;" onclick="window.open('https://stady-trial-room.glitch.me')"><img src="portasset/stadylogo.png"></div>-->
                 <!--                <div class="itemStady"><img src="portasset/UX.png" onclick="window.open('https://i.imgur.com/Vi6Vv4l.png')"></div>-->
+<div class="item"><img style="background: black ; object-fit:contain; padding:0 10px;" onclick = "document.getElementById('centerdemo').style.display = 'block';document.getElementById('introvideoiframe').src='https://www.youtube.com/embed/vpTZjmf-7h0'" id = "introvid" src="portasset/intro.png"></div><br>
 
-
-                <br>
                 <div class="itemStady tutoringsession" style="cursor:pointer;" onmouseover="document.getElementById('projname').innerHTML = 'Stady Tutoring session';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" onclick="window.open('https://stady-trial-room.glitch.me')"><img src="portasset/stadylogo.png"></div>
                 <div class="itemStady tutoringsession" onmouseover="document.getElementById('projname').innerHTML = 'Stady Tutoring session';" 
@@ -438,39 +472,60 @@
             </div><br>
 
             <div id="part1">
-                <div class="item"><img 
-                                       id="ace-98"
+                <div class="item" id="ace-98"><img 
                                        onmouseover="aceOver()"
                                        onmouseout="aceOut()"
                                        style="object-fit: contain;background:black;"
                                        onclick = "window.open('https://ace-98.glitch.me')"
-                                       src="portasset/fac-rec.jpg"></div>
+                                       src="portasset/fac-rec.jpg">
+                                   </div>
+                <div class="itemClick" id="ace-98click" style="display: none;"><img 
+                                       onmouseover="aceOver()"
+                                       onmouseout="aceOut()"
+                                       style="object-fit: contain;  background:black;"
+                                       onclick = "window.open('https://ace-98.glitch.me')"
+                                       src="portasset/click.png">
+                                   </div>
                 <div class="item"><img
                                        onmouseover="NLPOver();
                     document.getElementById('statement').innerHTML = 'so, how do machine understand us?';"
                                        onmouseout="NLPOut();
                     document.getElementById('statement').innerHTML = '';"
                                        onclick = "window.open('https://encoder-compare.glitch.me')"
-                                       src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2017/10/26015527/121.jpg"></div>
+                                       src="portasset/nlp.jpg"></div>
 
-                <div class="item"><img 
-                                       id="donutvr"
-                                       style="background:#F7B46C;"
+                <div class="item" id="donutvr"><img 
                                        onclick = "window.open('https://donutprototype.glitch.me')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'MY CAT DONUT WEBVR SCENE <br>\n Skills: webvr, javascript'
                     document.getElementById('statement').innerHTML = 'A must-go within this site';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';
                     document.getElementById('statement').innerHTML = '';"            
-                                       src="http://static1.squarespace.com/static/5b179d99a2772c64cb22caa2/5b18fc0c0e2e721b4216acf6/5b20da30575d1fc23f4c66aa/1530099441040/catVR_820_461_compressed.jpg?format=1500w"></div>
-                <div class="item"><img 
-                                       id="donutroom"
-                                       style="background:#96D2C6;"
+                                       src="portasset/donutvr.jpg"></div>
+                <div class="itemClick" id="donutvrclick" style="display: none;"><img 
+                                       onclick = "window.open('https://donutprototype.glitch.me')"
+                                       onmouseover="document.getElementById('projname').innerHTML = 'MY CAT DONUT WEBVR SCENE <br>\n Skills: webvr, javascript'
+                    document.getElementById('statement').innerHTML = 'A must-go within this site';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';
+                    document.getElementById('statement').innerHTML = '';"       
+                                       style="object-fit: contain;  background:#F7B46C;"
+                                       src="portasset/donut.png">
+                                   </div>
+                <div class="item" id="donutroom"><img 
                                        onclick = "window.open('https://donutprototype2.glitch.me')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'MY ROOM WEBVR SCENE'
                     document.getElementById('statement').innerHTML = 'Also a must-go within this site';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';
                     document.getElementById('statement').innerHTML = '';"            
                                        src="portasset/vrroom.png"></div>
+                <div class="itemClick" id="donutroomclick" style="display: none;"><img 
+                                       onclick = "window.open('https://donutprototype2.glitch.me')"
+                                       onmouseover="document.getElementById('projname').innerHTML = 'MY ROOM WEBVR SCENE'
+                    document.getElementById('statement').innerHTML = 'Also a must-go within this site';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';
+                    document.getElementById('statement').innerHTML = '';"   
+                                       style="object-fit: contain;  background:#96D2C6;"
+                                       src="portasset/donutroom.png">
+                                   </div>
                 <div class="item"><img 
                                        onclick = "window.open('https://cataholic.glitch.me')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'A website for cat lover <br>\n Skills: Vue.js , Vue-grid-layout.js';
@@ -490,7 +545,7 @@
                                                         document.getElementById('zombieunity').src='portasset/zombie.jpg'; 
                                                         document.getElementById('projname').innerHTML = ''"
                                        style="background: #3B52A2"
-                                       src="https://images.law.com/contrib/content/uploads/sites/390/2019/09/Walking-Dead-Zombies-Article-201909091840.jpg"></div>
+                                       src="portasset/zombie.jpg"></div>
                 
                 
 
@@ -513,7 +568,7 @@
                                        onclick = "window.open('https://palettes.design')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Color Palette Generator';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="https://onextrapixel.com/wp-content/uploads/2017/12/color-theory.jpg"></div>
+                                       src="portasset/color.jpg"></div>
                 <div class="item"><img 
                                        onclick = "window.open('https://vrtour.glitch.me/')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'VR tour guide';" 
@@ -533,7 +588,7 @@
                                        onmouseout = "document.getElementById('fakenews').style.objectFit = 'cover'
                      document.getElementById('fakenews').src='portasset/fakenews.jpg'; 
     document.getElementById('projname').innerHTML = ''"                                       
-                                       src="https://images.axios.com/LShbI5rZ2r4rCt3jerNYxkw2euE=/0x0:1920x1080/1920x1080/2018/10/21/1540129749559.jpg"></a></div>      
+                                       src="portasset/fakenews.jpg"></a></div>      
                 
                 <div class="item"><img 
                                        onclick = "window.open('https://bookdesign.glitch.me')"
@@ -562,13 +617,19 @@ src="portasset/rotate-block.gif"></div>
             </div>
             <br>
             <div id="part3">
-                <div class="item"><img 
-                                       id = "gait"
+                <div class="item" id = "gait"><img 
                                        style = "background:black;"
                                        onclick="window.open('https://github.com/nirvanaczj/GaitRecFooler/blob/master/Project%20Report.pdf')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Research on Adversarial Examples for Silhouette-based gait recognition networks';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        src="portasset/gait.jpg"></div>
+                <div class="itemClick" id="gaitclick" style="display: none;"><img 
+                                       onclick="window.open('https://github.com/nirvanaczj/GaitRecFooler/blob/master/Project%20Report.pdf')"
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Research on Adversarial Examples for Silhouette-based gait recognition networks';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       style="object-fit: contain;  background:black;"
+                                       src="portasset/click.png">
+                                   </div>
                 <div class="item"><img 
                                        onclick="window.open('portasset/CNNGAN.html')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Generate number image from scratch using CNN and GAN';" 
@@ -589,13 +650,13 @@ src="portasset/rotate-block.gif"></div>
                                        onmouseover="document.getElementById('projname').innerHTML = 'Exam score regression analysis';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                        style="object-fit: contain;" 
-                                       src="https://image.freepik.com/free-vector/online-exam-checklist-pencil-taking-test-choosing-answer-questionnaire-form-education-concept-vector-illustration_100456-102.jpg"></div>
+                                       src="portasset/examscore.jpg"></div>
                  <div class="item"><img 
                                    onclick="window.open('portasset/ML_hw1.html')"
                                    onmouseover="document.getElementById('projname').innerHTML = 'Hand-Coded decision tree algorithm';" 
                                    onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                    style="object-fit: contain;" 
-                                   src="https://www.inbenta.com/wp-content/uploads/2017/10/Webp.net-resizeimage-9.jpg"></div>
+                                   src="portasset/dt.jpg"></div>
             </div>
            
 
@@ -637,8 +698,7 @@ src="portasset/rotate-block.gif"></div>
                                      onmouseout = "document.getElementById('projname').innerHTML = '';" 
                                      onclick = "document.getElementById('introvideoiframe').src = 'https://www.youtube.com/embed/g7875JqxEKc';
                                      document.getElementById('centerdemo').style.display = 'block'"
-                                                                                             src="portasset/minion.gif"></div>
-                <!--                <div class="item"><a href="portasset/phone3d.png" data-lightbox="phone"><img src="portasset/phone3d.png"></a></div>-->
+                                                                                             src="portasset/minion.png"></div>
                 <div class="item"><img 
                                        onclick = "window.open('https://www.zijiachen.com/v1.1/portfolio')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Portfolio v1.0';" 
