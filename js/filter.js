@@ -138,6 +138,7 @@ function appearflex(part,i){
 }
 
 function appearWhole(){
+    RestartFunction();
     part1Whole.style.display = 'inline'
     part2Whole.style.display = 'inline'
     part4Whole.style.display = 'inline'

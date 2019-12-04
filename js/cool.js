@@ -152,3 +152,67 @@ function StopFunction() {
     clearInterval(myclickpng);
     clearInterval(myclickgait);
 }
+
+function RestartFunction() {
+    donutroomclick.style.display = "inline-block"
+    donutroom.style.display = "none"
+    donutclick.style.display = "inline-block"
+    donut.style.display = "none"
+    gaitclick.style.display = "inline-block"
+    gait.style.display = "none"
+    ace98click.style.display = "inline-block"
+    ace98.style.display = "none"
+    
+    clearInterval(myclickdonutroom);
+    clearInterval(myclickdonut);
+    clearInterval(myclickpng);
+    clearInterval(myclickgait);
+    
+    myclickdonutroom = setInterval(function(){
+    if(clickpngdonutroom == false){
+        donutroom.style.display = "none"
+        donutroomclick.style.display = "inline-block"
+        clickpngdonutroom = true}
+    else if (clickpngdonutroom == true){
+        donutroom.style.display = "inline-block"
+        donutroomclick.style.display = "none"
+        clickpngdonutroom = false}
+}
+                                   ,1000)
+    
+    myclickdonut = setInterval(function(){
+    if(clickpngdonut == false){
+        donut.style.display = "none"
+        donutclick.style.display = "inline-block"
+        clickpngdonut = true}
+    else if (clickpngdonut == true){
+        donut.style.display = "inline-block"
+        donutclick.style.display = "none"
+        clickpngdonut = false}
+}
+                               ,1000)
+    
+    myclickgait = setInterval(function(){
+    if(clickgait == false){
+        gait.style.display = "none"
+        gaitclick.style.display = "inline-block"
+        clickgait = true}
+    else if (clickgait == true){
+        gait.style.display = "inline-block"
+        gaitclick.style.display = "none"
+        clickgait = false}
+}
+                              ,1000)
+    
+    myclickpng = setInterval(function(){
+    if(clickpng == false){
+        ace98.style.display = "none"
+        ace98click.style.display = "inline-block"
+        clickpng = true}
+    else if (clickpng == true){
+        ace98.style.display = "inline-block"
+        ace98click.style.display = "none"
+        clickpng = false}
+}
+                             ,1000)
+}

@@ -152,7 +152,7 @@
                 /* display:none;*/
                 background:white;
                 color:black;
-                opacity:0.6;
+                /* opacity:0.6; */
                 transition-property: opacity;
                 transition-duration:1s;
                 width:3.2vw;
@@ -163,6 +163,7 @@
                 font-weight: 400;
                 font-style: normal;
                 padding:0;
+                cursor:pointer;
                 /*                display: none*/
             }
             
@@ -171,13 +172,13 @@
                 height:100%;
                 object-fit: cover;
             }
-            .item:hover{
+            /* .item:hover{
                 opacity:1;
                 cursor:pointer;
             }
             .item:not(:hover){
                 opacity:0.6;
-            }
+            } */
             .itemClick{
                 display:inline-block;
                 line-height:2vw;
@@ -185,7 +186,7 @@
                 /* display:none;*/
                 background:white;
                 color:black;
-                opacity:0.6;
+                /* opacity:0.6; */
                 transition-property: opacity;
                 transition-duration:1s;
                 width:3.2vw;
@@ -196,6 +197,7 @@
                 font-weight: 400;
                 font-style: normal;
                 padding:0;
+                cursor:pointer;
                 /*                display: none*/
             }
             
@@ -204,13 +206,13 @@
                 height:100%;
                 object-fit: cover;
             }
-            .itemClick:hover{
+            /* .itemClick:hover{
                 opacity:1;
                 cursor:pointer;
             }
             .itemClick:not(:hover){
                 opacity:0.6;
-            }
+            } */
             .itemStady{
                 cursor:wait;
                 display:inline-flex;
@@ -222,7 +224,7 @@
                 background:#3292f9;
                 color:black;
                 opacity:1;
-                opacity:0.5;
+                /* opacity:0.5; */
                 transition-property: opacity;
                 transition-duration:1s;
                 width:3.2vw;
@@ -232,14 +234,15 @@
                 font-family: filicudi-striped, sans-serif;
                 font-weight: 400;
                 font-style: normal;
+                cursor:pointer;
                 /*                border: 10px white ridge;*/
             }
-            .itemStady:hover{
+            /* .itemStady:hover{
                 opacity:1;
             }
             .itemStady:not(:hover){
                 opacity:0.5;
-            }
+            } */
 
             .itemStady img{
                 width:40%;
@@ -259,6 +262,7 @@
                 font-family: filicudi-striped, sans-serif;
                 font-weight: 400;
                 font-style: normal;
+                cursor:none;
             }
             .adj:hover{                
                 background: orange;
@@ -399,7 +403,7 @@
         <div id="demo"></div>
         <div id="moveup">
             <div id="centerdemo" onclick="document.getElementById('centerdemo').style.display = 'none';
-                                          document.getElementById('introvideoiframe').src=''"><iframe width="840" height="472.5" id="introvideoiframe" src="https://www.youtube.com/embed/vpTZjmf-7h0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                                          document.getElementById('introvideoiframe').src=''"><iframe width="840" height="472.5" id="introvideoiframe" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             <div class="texttrigger">
                 <span class="adj"></span> <span onclick="undoCool()">🔫Undo Cool</span>
                 <br>
@@ -688,7 +692,7 @@ src="portasset/rotate-block.gif"></div>
                 <div class="item"><a 
                                      onmouseover="document.getElementById('projname').innerHTML = 'Unity3D AR draft';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                     href="portasset/ar_draft.gif" data-lightbox="ardraft"><img src="portasset/ar_draft.gif"></a></div>
+                                     href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Far_draft.gif?v=1575338052424" data-lightbox="ardraft"><img src="portasset/ar_draft.gif"></a></div>
                 <div class="item"><a 
                                      onmouseover="document.getElementById('projname').innerHTML = 'Maya draft';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
@@ -699,6 +703,11 @@ src="portasset/rotate-block.gif"></div>
                                      onclick = "document.getElementById('introvideoiframe').src = 'https://www.youtube.com/embed/g7875JqxEKc';
                                      document.getElementById('centerdemo').style.display = 'block'"
                                                                                              src="portasset/minion.png"></div>
+                <div class="item"><img 
+                                       onclick = "window.open('https://3d-tv.glitch.me/')"
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Television in VR. Press any key to switch channel';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="portasset/tel.jpg"></div>
                 <div class="item"><img 
                                        onclick = "window.open('https://www.zijiachen.com/v1.1/portfolio')"
                                        onmouseover="document.getElementById('projname').innerHTML = 'Portfolio v1.0';" 
