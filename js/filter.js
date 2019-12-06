@@ -40,22 +40,22 @@ function handleMain(){
 
 
 function handleCEO(){
-//    disappear()
-//    setTimeout(function(){
-//        moveup.style.display = 'flex'
-//        moveup.style.justifyContent = 'center'
-//        moveup.style.alignItems = 'center'
-//        part3Whole.style.display = 'none'
-//        part2Whole.style.display = 'none'
-//        part4Whole.style.display = 'flex'
-//        part1Whole.style.display = 'none'
-//        part4Whole.style.width = '100%'
-//        part4Whole.style.height = 'auto'
-//        for( i = 0 ; i < part4.length ; i++) {
-//            appearflex(part4,i)
-//            part4[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
-//        }
-//    },1100)
+    //    disappear()
+    //    setTimeout(function(){
+    //        moveup.style.display = 'flex'
+    //        moveup.style.justifyContent = 'center'
+    //        moveup.style.alignItems = 'center'
+    //        part3Whole.style.display = 'none'
+    //        part2Whole.style.display = 'none'
+    //        part4Whole.style.display = 'flex'
+    //        part1Whole.style.display = 'none'
+    //        part4Whole.style.width = '100%'
+    //        part4Whole.style.height = 'auto'
+    //        for( i = 0 ; i < part4.length ; i++) {
+    //            appearflex(part4,i)
+    //            part4[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
+    //        }
+    //    },1100)
     window.open('https://stady.app')
 }
 
@@ -77,23 +77,23 @@ function handleFront(){
             appearflex(part1,i)
             part1[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
         }
-    },1200)
+    },975)
 
-//     if(lastone.style.display = 'none'){
-//         moveup.style.display = 'flex'
-//         moveup.style.justifyContent = 'center'
-//         moveup.style.alignItems = 'center'
-//         part3Whole.style.display = 'none'
-//         part2Whole.style.display = 'none'
-//         part4Whole.style.display = 'none'
-//         part1Whole.style.display = 'flex'
-//         part1Whole.style.width = '100%'
-//         part1Whole.style.height = 'auto'
-//         for( i = 0 ; i < part1.length ; i++) {
-//             appearflex(part1,i)
-//             part1[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
-//     }
-// }
+    //     if(lastone.style.display = 'none'){
+    //         moveup.style.display = 'flex'
+    //         moveup.style.justifyContent = 'center'
+    //         moveup.style.alignItems = 'center'
+    //         part3Whole.style.display = 'none'
+    //         part2Whole.style.display = 'none'
+    //         part4Whole.style.display = 'none'
+    //         part1Whole.style.display = 'flex'
+    //         part1Whole.style.width = '100%'
+    //         part1Whole.style.height = 'auto'
+    //         for( i = 0 ; i < part1.length ; i++) {
+    //             appearflex(part1,i)
+    //             part1[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
+    //     }
+    // }
 }
 
 
@@ -113,7 +113,7 @@ function handleSoft(){
             appearflex(part2,i)
             part2[i].style.height = `${(((100-(part2.length+1)*2.5)/part2.length)/3.2)*4}vh`
         }
-    },1200)
+    },975)
 }
 
 
@@ -134,7 +134,7 @@ function handleData(){
             appearflex(part3,i)
             part3[i].style.height = `${(((100-(part3.length+1)*2.5)/part3.length)/3.2)*4}vh`
         }
-    },1200)
+    },975)
 }
 
 
@@ -163,64 +163,96 @@ function appearWhole(){
     part4Whole.style.display = 'inline'
     part3Whole.style.display = 'inline'
     moveup.style.display = 'block'
-    var timesRun = 0
-    var interval = setInterval(function(){
-        timesRun += 1;
-        if(timesRun === 10){
-            clearInterval(interval);
+    //    var timesRun = 0
+    //    var interval = setInterval(function(){
+    //        timesRun += 1;
+    //        if(timesRun === 10){
+    //            clearInterval(interval);
+    //        }
+    //        var randomColor = `rgb(${(Math.random()*255)},${(Math.random()*255)},${(Math.random()*255)})`
+    //        demo.style.backgroundColor = randomColor
+    //        demo.style.opacity = '1'
+    //    }, 100)
+
+    for (let i = 0; i < 10; i++){
+        setTimeout(function(){
+            var randomColor = `rgb(${(Math.random()*255)},${(Math.random()*255)},${(Math.random()*255)})`
+            demo.style.backgroundColor = randomColor
+            demo.style.opacity = '1'
         }
-        var randomColor = `rgb(${(Math.random()*255)},${(Math.random()*255)},${(Math.random()*255)})`
-        demo.style.backgroundColor = randomColor
-        demo.style.opacity = '1'
-    }, 100)
-    
+                   ,i*100)
+    }
+
     for (var i  = 0 ; i < allgrids.length ; i++){
         allgrids[i].style.height = '4vh'
     }
-    
-    var timesrun1 = 0
-    var interval1 = setInterval(function(){
 
-        if(timesrun1 === allgrids.length-1){
-            clearInterval(interval1);
-        }
-        allgrids[timesrun1].style.display = 'inline-flex'
-        allgrids[timesrun1].style.margin = '1vw -5px 0px 1vw'
-        timesrun1 += 1;
-    }, (1000/(allgrids.length-1)))
+    //    var timesrun1 = 0
+    //    var interval1 = setInterval(function(){
+    //
+    //        if(timesrun1 === allgrids.length-1){
+    //            clearInterval(interval1);
+    //        }
+    //        allgrids[timesrun1].style.display = 'inline-flex'
+    //        allgrids[timesrun1].style.margin = '1vw -5px 0px 1vw'
+    //        timesrun1 += 1;
+    //    }, (1000/(allgrids.length-1)))
+
+    for (let i = 0; i < allgrids.length; i++){
+        setTimeout(function(){allgrids[i].style.display = 'inline-flex'; 
+                              allgrids[i].style.margin = '1vw -5px 0px 1vw'}
+                   ,i*13)
+    }
+
     setTimeout(function(){demo.style.opacity = '0.8'
-    },1050)
+                         },1050)
 }
 function disappear(){
     StopFunction()
     localStorage.setItem('clicked','true')
-    var timesRun = 0
-    var interval = setInterval(function(){
-        timesRun += 1;
-        if(timesRun === 10){
-            clearInterval(interval);
+    //    var timesRun = 0
+    //    var interval = setInterval(function(){
+    //        timesRun += 1;
+    //        if(timesRun === 10){
+    //            clearInterval(interval);
+    //        }
+    //        var randomColor = `rgb(${(Math.random()*255)},${(Math.random()*255)},${(Math.random()*255)})`
+    //        demo.style.backgroundColor = randomColor
+    //        demo.style.opacity = '1'
+    //    }, 100)
+    //    
+    for (let i = 0; i < 10; i++){
+        setTimeout(function(){
+            var randomColor = `rgb(${(Math.random()*255)},${(Math.random()*255)},${(Math.random()*255)})`
+            demo.style.backgroundColor = randomColor
+            demo.style.opacity = '1'
         }
-        var randomColor = `rgb(${(Math.random()*255)},${(Math.random()*255)},${(Math.random()*255)})`
-        demo.style.backgroundColor = randomColor
-        demo.style.opacity = '1'
-    }, 100)
-    var timesrun1 = 0
-    var interval1 = setInterval(function(){
+                   ,i*100)
+    }
 
-        if(timesrun1 === allgrids.length-1){
-            clearInterval(interval1);
-        }
-        allgrids[timesrun1].style.display = 'none'
-        allgrids[timesrun1].style.flex = 'none'
 
-        timesrun1 += 1;
-    },(1000/(allgrids.length-1)))
+    //    var timesrun1 = 0
+    //    var interval1 = setInterval(function(){
+    //
+    //        if(timesrun1 === allgrids.length-1){
+    //            clearInterval(interval1);
+    //        }
+    //        allgrids[timesrun1].style.display = 'none'
+    //        allgrids[timesrun1].style.flex = 'none'
+    //
+    //        timesrun1 += 1;
+    //    },(1000/(allgrids.length-1)))
 
+    for (let i = 0; i < allgrids.length; i++){
+        setTimeout(function(){allgrids[i].style.display = 'none'; 
+                              allgrids[i].style.flex = 'none'}
+                   ,i*13)
+    }
     setTimeout(function(){
         demo.style.opacity = '0.8'  
         demo.style.backgroundColor = 'white'
         // console.log(timesrun1)
-        }
+    }
                ,1050)
 }
 
