@@ -20,14 +20,14 @@ var itemLyricsArray = Array.prototype.slice.call(document.getElementsByClassName
 var stadyLogo = Array.prototype.slice.call((document.getElementsByClassName('itemStady')))
 var part1itemClick = document.getElementById('part1').querySelectorAll('.itemClick')
 var part3itemClick = document.getElementById('part3').querySelectorAll('.itemClick')
-var allgrids = itemsArray.concat(itemLyricsArray).concat(stadyLogo)
-
+var allgrids = itemsArray.concat(stadyLogo).concat(itemLyricsArray)
+var lastitem = document.getElementById('lastone')
 
 var allitem = [
     part1,part2,part3,part4,lyrics1,lyrics2,lyrics3,lyrics4
 ]
 
-console.log(allgrids.length)
+console.log('Length of all items as', new Date().toLocaleDateString('en-Us'),': ', allgrids.length)
 
 function handleMain(){
     if(localStorage.getItem('clicked')  == 'true'){        
@@ -78,10 +78,24 @@ function handleFront(){
             appearflex(part1,i)
             part1[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
         }
-    },1100)
-    
-}
+    },1200)
 
+//     if(lastone.style.display = 'none'){
+//         moveup.style.display = 'flex'
+//         moveup.style.justifyContent = 'center'
+//         moveup.style.alignItems = 'center'
+//         part3Whole.style.display = 'none'
+//         part2Whole.style.display = 'none'
+//         part4Whole.style.display = 'none'
+//         part1Whole.style.display = 'flex'
+//         part1Whole.style.width = '100%'
+//         part1Whole.style.height = 'auto'
+//         for( i = 0 ; i < part1.length ; i++) {
+//             appearflex(part1,i)
+//             part1[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
+//     }
+// }
+}
 
 
 function handleSoft(){
@@ -100,7 +114,7 @@ function handleSoft(){
             appearflex(part2,i)
             part2[i].style.height = `${(((100-(part2.length+1)*2.5)/part2.length)/3.2)*4}vh`
         }
-    },1100)
+    },1200)
 }
 
 
@@ -121,7 +135,7 @@ function handleData(){
             appearflex(part3,i)
             part3[i].style.height = `${(((100-(part3.length+1)*2.5)/part3.length)/3.2)*4}vh`
         }
-    },1100)
+    },1200)
 }
 
 
@@ -135,6 +149,12 @@ function appearflex(part,i){
         //        part[i].style.transform = 'scale(2,2)'
         //        part[i].style.marginLeft = `${part[i].style.marginLeft.slice(0,-2)*2}px`
     },i*50)
+}
+
+function allNotChange(){
+    for(let i = 0; i < allgrids.length ; i++){
+        allgrids[i].style.willChange = 'auto'
+    }
 }
 
 function appearWhole(){
@@ -169,7 +189,8 @@ function appearWhole(){
         allgrids[timesrun1].style.margin = '1vw -5px 0px 1vw'
         timesrun1 += 1;
     }, (1000/(allgrids.length-1)))
-    setTimeout(function(){demo.style.opacity = '0.8'},1050)
+    setTimeout(function(){demo.style.opacity = '0.8'
+    },1050)
 }
 function disappear(){
     StopFunction()
@@ -184,7 +205,6 @@ function disappear(){
         demo.style.backgroundColor = randomColor
         demo.style.opacity = '1'
     }, 100)
-
     var timesrun1 = 0
     var interval1 = setInterval(function(){
 
@@ -200,9 +220,17 @@ function disappear(){
     setTimeout(function(){
         demo.style.opacity = '0.8'  
         demo.style.backgroundColor = 'white'
-        console.log(timesrun1)}
+        // console.log(timesrun1)
+        }
                ,1050)
 }
+
+
+// textTrigger.addEventListener('mouseover',function(){
+//     for(let i = 0; i < allgrids.length ; i++){
+//         allgrids[i].style.willChange = 'display'
+//     }
+// })
 
 function generateArraytoSumFix(num,arrayLen){
     var list = []

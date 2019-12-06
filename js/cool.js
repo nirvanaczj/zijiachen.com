@@ -14,6 +14,7 @@ var zombieunity = document.getElementById('zombieunity')
 var fakenews = document.getElementById('fakenews')
 var gait = document.getElementById('gait') 
 var gaitclick = document.getElementById('gaitclick') 
+var textTrigger = document.querySelector('.texttrigger')
 
 function coolfunction(){
 
@@ -32,6 +33,7 @@ function coolfunction(){
 //    partcontainer.style.display = 'none'
     man = false;
     TweenMax.to("#moveup", 2.5, { ease: Elastic.easeOut.config(1, 0.3), y: '0vh' })
+    setTimeout(function(){moveup.style.willChange = 'auto'},3000)
 }
 
 // Elastic.easeOut.config(1, 0.3)
@@ -216,6 +218,10 @@ function RestartFunction() {
 }
                              ,1000)
 }
+
+cool.addEventListener('mouseover',function(){
+    moveup.style.willChange = 'transform'
+})
 
 
 if ((navigator.userAgent.match(/(phone|pod|iPhone|iPod|ios|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
