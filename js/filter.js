@@ -20,8 +20,7 @@ var itemLyricsArray = Array.prototype.slice.call(document.getElementsByClassName
 var stadyLogo = Array.prototype.slice.call((document.getElementsByClassName('itemStady')))
 var part1itemClick = document.getElementById('part1').querySelectorAll('.itemClick')
 var part3itemClick = document.getElementById('part3').querySelectorAll('.itemClick')
-var allgrids = itemsArray.concat(stadyLogo).concat(itemLyricsArray)
-var lastitem = document.getElementById('lastone')
+var allgrids = itemsArray.concat(itemLyricsArray).concat(stadyLogo)
 
 var allitem = [
     part1,part2,part3,part4,lyrics1,lyrics2,lyrics3,lyrics4
