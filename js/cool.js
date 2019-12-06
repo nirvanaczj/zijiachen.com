@@ -59,7 +59,9 @@ function undoCool(){
     TweenMax.to("#moveup", 2.5, { ease: Power4.easeOut, y: '110vh' })
 }
 
-
+function handleCurrent(){
+    document.getElementById('onworklist').style.display = 'block'
+}
 var startTSnum = 0
 setInterval(function(){
     var tsession = document.querySelectorAll('.tutoringsession')
@@ -222,6 +224,25 @@ function RestartFunction() {
 cool.addEventListener('mouseover',function(){
     moveup.style.willChange = 'transform'
 })
+
+
+var scddot = document.getElementById('scddot')
+var thddot = document.getElementById('thddot')
+
+var scddotdisplayed = true
+setInterval(function(){
+    if(scddotdisplayed == true){
+    scddot.style.display = 'inline'
+    setTimeout(function(){
+        thddot.style.display = 'inline'
+        scddotdisplayed = false 
+    },500)
+}   else {
+    scddot.style.display = 'none'
+    thddot.style.display = 'none'
+    scddotdisplayed = true
+}
+},1000)
 
 
 if ((navigator.userAgent.match(/(phone|pod|iPhone|iPod|ios|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
