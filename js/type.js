@@ -55,12 +55,13 @@ function render(font) {
 }
 
 
-document.addEventListener("mousemove", function(event){
+
+window.onload = function(){
+    document.addEventListener("mousemove", function(event){
     var clientWpercent = 10 + event.clientX/document.body.clientWidth * 90
     var clientHpercent = 10 + event.clientY/document.body.clientHeight * 90
     snapStrength = clientHpercent
     snapDistance = clientWpercent
-
     render(font)
 }
-                         );
+                         );}

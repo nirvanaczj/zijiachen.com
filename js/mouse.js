@@ -15,3 +15,14 @@ function NLPOut(){
     document.getElementById('projname').innerHTML = '';}
 
 
+//window.onload = function(){
+//    var lbclose = document.querySelectorAll('.lb-close');
+//    var lbimage = document.querySelectorAll('.lb-image');
+//    for ( var i = 0 ; i < lbclose.length ; i ++ ){
+//        lbclose[i].style.display = 'none'
+//    }
+//    for ( var i = 0 ; i < lbimage.length ; i ++ ){
+//        lbimage[i].style.width = '50vw';
+//        lbimage[i].style.height = 'auto';
+//    }
+//}
