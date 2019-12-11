@@ -13,12 +13,12 @@ import tensorflow as tf
 import tensorflow_hub as hub
 from bson.json_util import dumps
 
-bc = BertClient('104.197.70.39')
+bc = BertClient('**********')
 app = Flask(__name__, static_url_path='')
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-mongodbUri =  'mongodb+srv://view:8Erlp4kcwdO3DSGz@stadyapp-hqpe8.mongodb.net/stadyapp?retryWrites=true&w=majority'
+mongodbUri =  'mongodb+srv://view:**************.mongodb.net/stadyapp?retryWrites=true&w=majority'
 
 client = pymongo.MongoClient(mongodbUri)
 db = client.get_database('stadyapp')
@@ -244,7 +244,7 @@ def returnTutorbyNames():
         tutors_full = pd.concat([users_df,tutors_df],axis=1).drop('user',axis=1)
         tutor_one = tutors_full[tutors_full['username'].str.contains(data,case = False)]
         return (dumps(tutor_one.to_dict('index')))
-        
+
 @app.route('/newReq', methods=['GET'])
 @cross_origin()
 def returnNewest():
