@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Stady Semantic Search Engine</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://i.imgur.com/h917uzj.png" type="image/gif">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/ygu8mmu.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #center {
+        width: 1000px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 20px;
+      }
+      #projectTitle {
+        font-size: 65px;
+        margin-top: 3%;
+        font-family: rig-solid-bold-fill, sans-serif;
+      }
+      #link {
+        font-size: 24px;
+        margin-top: 15px;
+        font-family: filicudi-solid, sans-serif;
+      }
+      #link a {
+        color: black;
+      }
+      #subTitle {
+        font-size: 24px;
+        margin-top: 15px;
+        font-family: filicudi-solid, sans-serif;
+      }
+      #Skill {
+        display: block;
+        margin-top: 10px;
+        height:auto;
+        line-height:39px;
+        font-family: filicudi-solid, sans-serif;
+      }
+      .tech {
+        display: inline;
+        background: black;
+        color: white;
+        width: auto;
+        height: 24px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-sizing:border-box;
+      }
+      #Duration {
+        margin-top: 15px;
+        font-family: filicudi-solid, sans-serif;
+        font-size: 20px;
+      }
+      #content {
+        display: block;
+        margin-top: 24px;
+        font-size: 20px;
+        height:auto;
+        font-family: "Roboto", sans-serif;
+        line-height:50px;
+      }
+      #content img{
+        width:100%;
+      }
+      #content a{
+        color:black;
+      }
+      #content iframe{
+        width:100%;
+        height:800px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="center">
+      <div id="projectTitle">
+        Stady Semantic Search
+      </div>
+      <div id="link">
+        <a href="https://www.stadyapp.com/#/intro" target="_blank"
+          >LINK TO THE SITE</a
+        >
+      </div>
+      <div id="subTitle">
+        By:ZiJia Chen
+      </div>
+
+      <div id="Skill">
+        <div class="tech">NLP</div>
+        <div class="tech">Vue.js</div>
+        <div class="tech">Google cloud platform</div>
+        <div class="tech">Python</div>
+        <div class="tech">MongoDB</div>
+      </div>
+      <div id="Duration">
+        Duration: Sep,2019 -- Nov,2019
+      </div>
+      <hr />
+      <div id="content">
+        Prompt: To create a better search experience for users.<br><br>
+        Idea:<br>
+        With my <a href="https://encoder-compare.glitch.me/" target="_blank">exploration</a> on Universal Sentence Encoders, I figured that different length of sentence/phrases can be encoded into same length arrays. Therefore, I got an idea to develop a basic  recommendation system for Stady based on user's course name input and tutor courses history, and furthermore, compare and return tutors who took similar courses as user's input.
+        <br><br>
+        Technical:<br>
+        I used <a href="https://bert-as-service.readthedocs.io/" target="_blank">bert-as-service</a> for sentence encoding and <span style="text-decoration:underline">reduced mean pooling</span> for pooling high dimension arrays. I encoded all tutors' courses into same length arrays and save them in a .txt file updating every night. In this way, new searchs won't need the search engine to re-encode all tutors' courses. Moreover, I utlized Cosine Similarity instead of Euclidean Distance to compare array because it turns out to perform better while testing. After all, I deployed such model to google cloud platform's virtual machine with Flask. I also developed frontend search page for stadyapp.com
+        <br><br>
+        Utility:<br>
+
+        Stady Semantic Search engine allows students to search for tutors related to their current classes. For example, by searching “Statistical Inference”, the search engine can return tutors who have previously taken courses on probability. 
+        <br><br>Python Code for manipulating and comparing data (some are hashed for security purpose):<br>  
+        <iframe src="https://www.zijiachen.com/portasset/Search.html" frameborder="0" >
+          
+        </iframe>
+         <br><br> <br>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

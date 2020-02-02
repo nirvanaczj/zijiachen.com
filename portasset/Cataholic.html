@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cataholic Intro</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://i.imgur.com/h917uzj.png" type="image/gif">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/ygu8mmu.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body,
+      html {
+        margin: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #center {
+        width: 1000px;
+        margin: 0 auto;
+        height: 100%;
+        padding: 20px;
+      }
+      #projectTitle {
+        font-size: 65px;
+        margin-top: 3%;
+        font-family: rig-solid-bold-fill, sans-serif;
+      }
+      #link {
+        font-size: 24px;
+        margin-top: 15px;
+        font-family: filicudi-solid, sans-serif;
+      }
+      #link a {
+        color: black;
+      }
+      #subTitle {
+        font-size: 24px;
+        margin-top: 15px;
+        font-family: filicudi-solid, sans-serif;
+      }
+      #Skill {
+        display: block;
+        margin-top: 10px;
+        height:auto;
+        line-height:39px;
+        font-family: filicudi-solid, sans-serif;
+      }
+      .tech {
+        display: inline;
+        background: black;
+        color: white;
+        width: auto;
+        height: 24px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        box-sizing:border-box;
+      }
+      #Duration {
+        margin-top: 15px;
+        font-family: filicudi-solid, sans-serif;
+        font-size: 20px;
+      }
+      #content {
+        display: block;
+        margin-top: 24px;
+        font-size: 20px;
+        height:auto;
+        font-family: "Roboto", sans-serif;
+        line-height:50px;
+      }
+      #content img{
+        width:100%;
+      }
+      #content a {
+        color: black;
+      }
+      #content iframe{
+        width:100%;
+        height:800px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="center">
+      <div id="projectTitle">
+        Are you a Cataholic?
+
+      </div>
+      <div id="link">
+        <a href="https://cataholic.glitch.me/" target="_blank"
+          >Project Link</a
+        >
+      </div>
+      <div id="subTitle">
+        By:ZiJia Chen
+      </div>
+      <div id="Skill">
+        <div class="tech">Javascript</div>
+        <div class="tech">Vue.js</div>
+        <div class="tech">Vue-Grid-Layout.js</div>
+      </div>
+      <div id="Duration">
+        Duration: Oct,2019 -- Oct,2019
+      </div>
+      <hr />
+      <div id="content">
+        Definition of Cataholic: <br>”It’s like an alcoholic, but with cats.” 
+<br><br>
+Idea : <br>Since I really like cat, I want to create an online cat related experience. This website is to test if you are really into cats or not. Simulating UI interface
+        of Pinterest, this project will generate random cat images from <a href="https://aws.random.cat/meow" target="_blank">API</a>. Moreover, this project created a gamification feeling with
+many hidden triggers.
+<br><br>
+
+Tech behind it :<br> It created a drag/resizable feature allowing the user to create a customized user interface using vue-grid-layout.js. Moreover, using
+setTimeout, it created a movie scene feeling when the user clicked ”Hell No” button.<br> <br>
+      Features:<br>
+        <ul>
+          <li>Drag/Resize</li>
+          <img data-aos="fade-up-right" src="https://cdn.glitch.com/aeaa5068-e8f4-486f-9677-db60670f4be7%2Fezgif-5-e27385b2d4eb.gif?v=1576907718647" alt="drag">
+          <li>"Hellno" Trigger Animation</li>
+          <img data-aos="fade-up-right" src="https://cdn.glitch.com/aeaa5068-e8f4-486f-9677-db60670f4be7%2Fezgif-5-cadf1708544c.gif?v=1576907587562" alt="hellno">
+          
+          <li>Hell Yes/Yes/No triggers with combo count</li>
+          <img data-aos="fade-up-right" src="https://cdn.glitch.com/aeaa5068-e8f4-486f-9677-db60670f4be7%2Fezgif-5-951e8c703bdd.gif?v=1576907795533" alt="trigger">
+
+        </ul>
+        <br>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -2,13 +2,17 @@
 <html lang="en">
   <head>
     <title>ZIJIA CHEN</title>
-    <link rel="icon" href="https://i.imgur.com/quzCPZa.png" type="image/gif">
+    <link rel="icon" href="https://i.imgur.com/quzCPZa.png" type="image/gif" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
       rel="stylesheet"
     />
 
@@ -18,66 +22,182 @@
         font-family: "Roboto", sans-serif;
         font-size: 5vmin;
         line-height: 8vmin;
-        color:white;
+        color: white;
       }
       body,
       html {
         height: 100%;
         margin: 0;
-        overflow-x:hidden;
+        overflow-x: hidden;
       }
-      #title{
-        background:white;
-        height:10%;
-        width:100vw;
-        padding:10vw;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        box-sizing:border-box;
-      }
-      #block1 {
-        height: 90%;
-        background:#3292f9;
+      #title {
+        background: white;
+        height: 10vh;
+        width: 100vw;
+        padding: 10vw;
         display: flex;
         justify-content: center;
         align-items: center;
+        box-sizing: border-box;
+        position: fixed;
+      }
+      #block1 {
+        /*         height: 90%; */
+        background: linear-gradient(to bottom, lightblue, pink);
+        margin-top: 10vh;
+        /*         display: flex;
+        justify-content: center;
+        align-items: center; */
         width: 100vw;
       }
-      #block2 {
-        height: 200px;
-        background:white;
-        display: block;
+      
+      .proj {
         width: 100vw;
-        text-align:center;
-        padding:50px 0;
+        /*         height:40vh; */
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        margin: 0vh 10vw 10vw 10vw;
       }
-
+      .proj img {
+        width: 80vw;
+        height:27.5vh;
+        object-fit:cover;
+        /*         margin:10vh 10vw 0 10vw; */
+      }
+      .proj a {
+        text-decoration: none;
+        color: white;
+      }
     </style>
   </head>
   <body>
     <div id="title">
-      <img src="https://i.imgur.com/6mZvJu2.png" style="width:60vw;">
+      <img src="https://i.imgur.com/6mZvJu2.png" style="width:60vw;" />
     </div>
     <div id="block1">
-      <div id="message">
-        I know a mobile version is essential<br />
-        but... for a better experience<br>
-        Please visit the desktop version.<br><br><br>
-        Don't be sad <br>
-        I still got something for you<br><br>
-      <img src ="https://i.imgur.com/cnMGBp4.png" height="40px;">
+      <div class="proj">
+        <a href="https://mobile-ace-98.glitch.me/" target="_blank">
+          <img
+            src="https://i.imgur.com/CQf2qj9.gif"
+            style="margin-top:10vw;"
+          /> </a
+        ><br />
+        Ace-98 Operation System (Mobile)
       </div>
 
+      <div class="proj">
+        <iframe
+          style="width:80vw;height:27.5vh;"
+          src="https://www.youtube.com/embed/wedVJDZLdzE"
+          frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <br />Unity Zombie Game
+      </div>
+      
+      <div class="proj">
+        <a href="https://github.com/nirvanaczj/GaitRecFooler/blob/master/Project%20Report.pdf" target="_blank">
+          <img
+            src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fgait.jpg?v=1575743372858"
+          /> </a
+        ><br />
+        Research on Adversarial Examples for Silhouette-based gait recognition <br>networks
+      </div>
+      
+      <div class="proj">
+        
+          <img
+            src="https://cdn.glitch.com/e830607b-4de4-490f-9ee6-5e0d628b92b5%2Fezgif-2-5259ce3960f8.gif?v=1580386885965"
+          /> <br />
+        Rolling Balls
+      </div>
+      
+      <div class="proj">
+        
+          <img
+            src="https://cdn.glitch.com/e830607b-4de4-490f-9ee6-5e0d628b92b5%2Fezgif-2-e49f6b41ef51.gif?v=1580386991144"
+          /> <br />
+        Stady 3D poster
+      </div>
+      
+      <div class="proj">
+        
+          <img
+            src="https://cdn.glitch.com/e830607b-4de4-490f-9ee6-5e0d628b92b5%2Fezgif-2-895e4f8d2a5d.gif?v=1580390862418"
+          /> <br />
+        Fake News 3D poster
+      </div>
+      
+      <div class="proj">
+        
+          <img
+            src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fposter.png?v=1575742997966"
+          /> <br />
+        Poster
+      </div>
+      
+      <div class="proj">
+        <a href="https://bookdesign.glitch.me/" target="_blank">
+          <img
+            src="https://cdn.glitch.com/e830607b-4de4-490f-9ee6-5e0d628b92b5%2Fbook.png?v=1580380718634"
+          /> </a
+        ><br />
+        Book Design
+      </div>
+      
+      <div class="proj">
+        
+          <img
+            src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fgun3D.gif?v=1575742880005"
+          /> <br />
+        3D Gun model
+      </div>
+      
+      <div class="proj">
+        
+          <img
+            src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Far_draft.gif?v=1575338052424"
+          /> <br />
+        AR Humanoid Statue
+      </div>
+      
+      <div class="proj">
+        
+          <img
+            src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-fac774beb759.gif?v=1575562802690"
+          /> <br />
+        Stady 3D poster
+      </div>
+      
+      <div class="proj">
+        
+          <img
+            src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-1a0d02643c9f.gif?v=1574205602851"
+          /> <br />
+        Ice Cream 3D poster
+      </div>
+      
+      <div class="proj" style="margin-bottom:0; padding:0 0 10vw 0;">
+        <iframe
+          style="width:80vw;height:27.5vh;"
+          src="https://www.youtube.com/embed/vpTZjmf-7h0"
+          frameborder="0"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <br />Portfolio Intro Video<br>
+        See more on the desktop version
+      </div>
+      
     </div>
-    <div id="block2">
-      <iframe height="200px" id="introvideoiframe" src="https://www.youtube.com/embed/vpTZjmf-7h0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
+
+

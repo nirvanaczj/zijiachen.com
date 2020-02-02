@@ -22,6 +22,8 @@ var part1itemClick = document.getElementById('part1').querySelectorAll('.itemCli
 var part3itemClick = document.getElementById('part3').querySelectorAll('.itemClick')
 var allgrids = itemsArray.concat(itemLyricsArray).concat(stadyLogo)
 
+
+
 var allitem = [
     part1,part2,part3,part4,lyrics1,lyrics2,lyrics3,lyrics4
 ]
@@ -70,6 +72,7 @@ function handleFront(){
         part3Whole.style.display = 'none'
         part2Whole.style.display = 'none'
         part4Whole.style.display = 'none'
+        part5Whole.style.display = 'none'
         part1Whole.style.display = 'flex'
         part1Whole.style.width = '100%'
         part1Whole.style.height = 'auto'
@@ -79,21 +82,7 @@ function handleFront(){
         }
     },975)
 
-//     if(lastone.style.display = 'none'){
-//         moveup.style.display = 'flex'
-//         moveup.style.justifyContent = 'center'
-//         moveup.style.alignItems = 'center'
-//         part3Whole.style.display = 'none'
-//         part2Whole.style.display = 'none'
-//         part4Whole.style.display = 'none'
-//         part1Whole.style.display = 'flex'
-//         part1Whole.style.width = '100%'
-//         part1Whole.style.height = 'auto'
-//         for( i = 0 ; i < part1.length ; i++) {
-//             appearflex(part1,i)
-//             part1[i].style.height = `${(((100-(part1.length+1)*2.5)/part1.length)/3.2)*4}vh`
-//     }
-// }
+
 }
 
 
@@ -107,6 +96,7 @@ function handleSoft(){
         part4Whole.style.display = 'none'
         part3Whole.style.display = 'none'
         part2Whole.style.display = 'flex'
+        part5Whole.style.display = 'none'
         part2Whole.style.width = '100%'
         part2Whole.style.height = 'auto'
         for( i = 0 ; i < part2.length ; i++) {
@@ -117,6 +107,25 @@ function handleSoft(){
 }
 
 
+function handle3D(){
+    disappear()
+    setTimeout(function(){
+        moveup.style.display = 'flex'
+        moveup.style.justifyContent = 'center'
+        moveup.style.alignItems = 'center'
+        part1Whole.style.display = 'none'
+        part4Whole.style.display = 'none'
+        part3Whole.style.display = 'none'
+        part5Whole.style.display = 'flex'
+        part2Whole.style.display = 'none'
+        part5Whole.style.width = '100%'
+        part5Whole.style.height = 'auto'
+        for( i = 0 ; i < part5.length ; i++) {
+            appearflex(part5,i)
+            part5[i].style.height = `${(((100-(part5.length+1)*2.5)/part5.length)/3.2)*4}vh`
+        }
+    },975)
+}
 
 function handleData(){
     disappear()
@@ -128,6 +137,7 @@ function handleData(){
         part2Whole.style.display = 'none'
         part4Whole.style.display = 'none'
         part3Whole.style.display = 'flex'
+        part5Whole.style.display = 'none' 
         part3Whole.style.width = '100%'
         part3Whole.style.height = 'auto'
         for( i = 0 ; i < part3.length ; i++) {
@@ -162,6 +172,7 @@ function appearWhole(){
     part2Whole.style.display = 'inline'
     part4Whole.style.display = 'inline'
     part3Whole.style.display = 'inline'
+    part5Whole.style.display = 'inline'
     moveup.style.display = 'block'
     // var timesRun = 0
     // var interval = setInterval(function(){
@@ -202,7 +213,7 @@ function appearWhole(){
                               allgrids[i].style.margin = '1vw -5px 0px 1vw'}
                    ,i*13)
     }
-    setTimeout(function(){demo.style.opacity = '0.8'
+    setTimeout(function(){demo.style.opacity = '0.8';demo.style.backgroundColor="white"
     },1050)
 }
 function disappear(){
@@ -251,7 +262,7 @@ function disappear(){
         demo.style.backgroundColor = 'white'
         // console.log(timesrun1)
         }
-               ,1050)
+               ,1010)
 }
 
 

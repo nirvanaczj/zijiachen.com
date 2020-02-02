@@ -14,7 +14,14 @@
 
             gtag('config', 'UA-137354001-2');
         </script>
+        <script>
+            if ((navigator.userAgent.match(/(phone|pod|iPhone|iPod|ios|Android|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+                window.location.href = 'https://www.zijiachen.com/mobile.html'
+            }     
+        </script>
         <meta charset="UTF-8">
+        <meta name="keywords" content="ZiJia Chen,Designer,Entrepreneur,Software Engineer,Personal Website.">
+    <meta name="description" content="This is ZiJia Chen's personal website, feel free to explore">
         <title>ZIJIA CHEN</title>
         <link rel="icon" href="https://i.imgur.com/quzCPZa.png" type="image/gif">
         <link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">;
@@ -59,7 +66,7 @@
                 position:absolute;
                 /*                padding: 16px 20px;*/
                 cursor:pointer;
-                bottom:28px;
+                bottom:20px;
                 left:1vw;
                 color:black;
                 opacity:0.8;
@@ -143,7 +150,7 @@
                 background:rgba(0,0,0,0.5);
             }
             #centerlist{
-/*                margin:auto;*/
+                /*                margin:auto;*/
                 width:800px;
                 height:100vh;
                 background:white;
@@ -152,7 +159,7 @@
                 z-index:1100000;
                 /*                overflow-y: scroll;*/
                 font-family: rig-solid-bold-fill, sans-serif;
-                
+
             }
 
             .listitem{
@@ -204,6 +211,7 @@
                 right:20px;
                 font-size:1vw;
                 text-align: right;
+                cursor:pointer;
                 line-height:3.5vh;
                 color:black;
                 font-family: filicudi-striped, sans-serif;
@@ -343,7 +351,7 @@
             }
             span:hover{
                 background: red;
-                cursor:default;
+                /* cursor:default; */
             }
             #folder    {
                 display: block;
@@ -414,7 +422,7 @@
             <div id="centerdemo" onclick="document.getElementById('centerdemo').style.display = 'none';
                                           document.getElementById('introvideoiframe').src=''"><iframe width="840" height="472.5" id="introvideoiframe" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             <div id = "onworklist">
-                
+
                 <div id = "centerlist">
                     <div class = "scrollpart">
                         <div class = "listitem">
@@ -441,7 +449,7 @@
                         <div class = "listitem">
                             Ace-98 Mobile Version<br>
                             <div class ="relatedTag">
-                               Vanilla Js
+                                Vanilla Js
                             </div>
                         </div>
 
@@ -488,14 +496,16 @@
             <div class="texttrigger">
                 <span class="adj"></span> <span onclick="undoCool()">🔫Undo Cool</span>
                 <br>
-                <span class="adj"></span> <span onclick="handleMain()">🏹Triggers</span>
+                <span class="adj"></span> <span onclick="handleMain()">🏹Main Trigger</span>
                 <br>
-                <span class="adj">👨‍💻"featured"</span> <span onclick="handleFront()">Designer</span>
+                <span class="adj">🈯️"Adjunct" </span> <span onclick="handleCEO()">CEO of Stady</span><br>
+
+                <span class="adj">🕹️"featured"</span> <span onclick="handleFront()">interaction Designer</span><br>
+
+                <span class="adj">👨‍💻Machine Learning</span> <span onclick="handleData()"> Enthusiastic</span><br>
+                <span class="adj">🎥"somehow" </span>    <span onclick="handle3D()">Graphics Designer</span><br>
+                <span class="adj">🤪"Just for fun"</span> <span onclick="handleSoft()">Designer</span><br>
                 <br>
-                <span class="adj">🉑"somewhat"</span> <span onclick="handleSoft()">Designer</span>
-                <br>
-                <span class="adj">🈯️"Adjunct CEO" of </span> <span onclick="handleCEO()">Stady</span><br>
-                <span class="adj">📈</span> <span onclick="handleData()">Machine Learning Enthusiastic</span><br>
                 <span onclick="handleCurrent()">🔨Current working on .<span id="scddot">.</span><span id="thddot">.</span></span>
             </div>
 
@@ -508,179 +518,318 @@
                 <div class="item"><img style="background: black ; object-fit:contain; padding:0 10px;" onclick = "document.getElementById('centerdemo').style.display = 'block';document.getElementById('introvideoiframe').src='https://www.youtube.com/embed/vpTZjmf-7h0'" id = "introvid" src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fintro.png?v=1575743372049"></div><br>
 
                 <div class="itemStady tutoringsession" style="cursor:pointer;" onmouseover="document.getElementById('projname').innerHTML = 'Stady Tutoring session';" 
-                     onmouseout = "document.getElementById('projname').innerHTML = '';" onclick="window.open('https://www.stadyapp.com/trial.html')"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
+                     onmouseout = "document.getElementById('projname').innerHTML = '';" onclick="window.open('/portasset/stadyTS.html')"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
                 <div class="itemStady tutoringsession" onmouseover="document.getElementById('projname').innerHTML = 'Stady Tutoring session';" 
                      onmouseout = "document.getElementById('projname').innerHTML = '';"
-                     style="cursor:pointer;" onclick="window.open('https://www.stadyapp.com/trial.html')"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
+                     style="cursor:pointer;" onclick="window.open('/portasset/stadyTS.html')"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
 
                 <br>
-                <div class="item"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FUX.png?v=1575743372174" 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Stady Product Design';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" onclick="window.open('https://i.imgur.com/Vi6Vv4l.png')"></div>
-                <div class="item"><img onmouseover="document.getElementById('projname').innerHTML = 'Stady UI design';" 
+                <div class="item"><img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Course Semantic Search Engine';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       onclick = "window.open('https://sketch.the.ripper.graphics/sb3uWbN0/aug28')"
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-93a190d30980.gif?v=1574916443659"></div>
-                <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FStadyBP.jpg?v=1575743026438" data-lightbox="stadyBP"><img 
-                                                                                               onmouseover="document.getElementById('projname').innerHTML = 'Stady Brochure Design';" 
-                                                                                               onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                                                                               src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FStadyBP.jpg?v=1575743026438"></a></div>
-                <br>
-                <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"
-                     onmouseover="document.getElementById('projname').innerHTML = 'Stady.app';" 
-                     onmouseout = "document.getElementById('projname').innerHTML = '';"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
-                <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"
-                     onmouseover="document.getElementById('projname').innerHTML = 'Stady.app';" 
-                     onmouseout = "document.getElementById('projname').innerHTML = '';"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
-                <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"
-                     onmouseover="document.getElementById('projname').innerHTML = 'Stady.app';" 
-                     onmouseout = "document.getElementById('projname').innerHTML = '';"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
-                <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"
-                     onmouseover="document.getElementById('projname').innerHTML = 'Stady.app';" 
-                     onmouseout = "document.getElementById('projname').innerHTML = '';"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
-
-
-            </div>
+                                       onclick = "window.open('portasset/SemanticSearch.html')"
+                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FTop-search-engines.png?v=1576039260873"></a></div>     
+            <div class="item"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FUX.png?v=1575743372174" 
+                                   onmouseover="document.getElementById('projname').innerHTML = 'Stady Product Design';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';" onclick="window.open('portasset/stadyUX.html')"></div>
+            <div class="item"><img onmouseover="document.getElementById('projname').innerHTML = 'Stady UI design';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                   onclick = "window.open('portasset/stadyUI.html')"
+                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-93a190d30980.gif?v=1574916443659"></div>
+            <!-- <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FStadyBP.jpg?v=1575743026438" data-lightbox="stadyBP"><img 
+onmouseover="document.getElementById('projname').innerHTML = 'Stady Brochure Design';" 
+onmouseout = "document.getElementById('projname').innerHTML = '';" 
+src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FStadyBP.jpg?v=1575743026438"></a> -->
 
             <br>
-
-            <div id="LyricsPart2">
-                <div class="itemLyrics" style="margin-left:1vw;">Told</div>
-                <div class="itemLyrics">you</div>
-                <div class="itemLyrics">not</div>
-                <div class="itemLyrics">to</div>
-                <div class="itemLyrics">worry</div>
-                <div class="itemLyrics">but</div>
-                <div class="itemLyrics">maybe</div>
-                <div class="itemLyrics">that's</div>
-                <div class="itemLyrics">a lie</div>
-            </div><br>
-
-            <div id="part1">
-                <div class="item" id="ace-98"><img 
-                                                   onmouseover="aceOver()"
-                                                   onmouseout="aceOut()"
-                                                   style="object-fit: contain;background:black;"
-                                                   onclick = "window.open('https://ace-98.glitch.me')"
-                                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Ffac-rec.jpg?v=1575743371637">
-                </div>
-                <div class="itemClick" id="ace-98click" style="display: none;"><img 
-                                                                                    onmouseover="aceOver()"
-                                                                                    onmouseout="aceOut()"
-                                                                                    style="object-fit: contain;  background:black;"
-                                                                                    onclick = "window.open('https://ace-98.glitch.me')"
-                                                                                    src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fclick.png?v=1575743371873">
-                </div>
-                <div class="item"><img
-                                       onmouseover="NLPOver();
-                    document.getElementById('statement').innerHTML = 'so, how do machine understand us?';"
-                                       onmouseout="NLPOut();
-                    document.getElementById('statement').innerHTML = '';"
-                                       onclick = "window.open('https://encoder-compare.glitch.me')"
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fnlp.jpg?v=1575743371741"></div>
-
-                <div class="item" id="donutvr"><img 
-                                                    onclick = "window.open('https://donutprototype.glitch.me')"
-                                                    onmouseover="document.getElementById('projname').innerHTML = 'MY CAT DONUT WEBVR SCENE <br>\n Skills: webvr, javascript'
-                    document.getElementById('statement').innerHTML = 'A must-go within this site';" 
-                                                    onmouseout = "document.getElementById('projname').innerHTML = '';
-                    document.getElementById('statement').innerHTML = '';"            
-                                                    src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fdonutvr.jpg?v=1575743371694"></div>
-                <div class="itemClick" id="donutvrclick" style="display: none;"><img 
-                                                                                     onclick = "window.open('https://donutprototype.glitch.me')"
-                                                                                     onmouseover="document.getElementById('projname').innerHTML = 'MY CAT DONUT WEBVR SCENE <br>\n Skills: webvr, javascript'
-                    document.getElementById('statement').innerHTML = 'A must-go within this site';" 
-                                                                                     onmouseout = "document.getElementById('projname').innerHTML = '';
-                    document.getElementById('statement').innerHTML = '';"       
-                                                                                     style="object-fit: contain;  background:#F7B46C;"
-                                                                                     src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fdonut.png?v=1575743372022">
-                </div>
-                <div class="item" id="donutroom"><img 
-                                                      onclick = "window.open('https://donutprototype2.glitch.me')"
-                                                      onmouseover="document.getElementById('projname').innerHTML = 'MY ROOM WEBVR SCENE'
-                    document.getElementById('statement').innerHTML = 'Also a must-go within this site';" 
-                                                      onmouseout = "document.getElementById('projname').innerHTML = '';
-                    document.getElementById('statement').innerHTML = '';"            
-                                                      src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fvrroom.png?v=1575743371577"></div>
-                <div class="itemClick" id="donutroomclick" style="display: none;"><img 
-                                                                                       onclick = "window.open('https://donutprototype2.glitch.me')"
-                                                                                       onmouseover="document.getElementById('projname').innerHTML = 'MY ROOM WEBVR SCENE'
-                    document.getElementById('statement').innerHTML = 'Also a must-go within this site';" 
-                                                                                       onmouseout = "document.getElementById('projname').innerHTML = '';
-                    document.getElementById('statement').innerHTML = '';"   
-                                                                                       style="object-fit: contain;  background:#96D2C6;"
-                                                                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fdonutroom.png?v=1575743372065">
-                </div>
-                <div class="item"><img 
-                                       onclick = "window.open('https://cataholic.glitch.me')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'A website for cat lover <br>\n Skills: Vue.js , Vue-grid-layout.js';
-                    document.getElementById('statement').innerHTML = 'ARE YOU A CATAHOLIC??';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';
-                    document.getElementById('statement').innerHTML = '';" 
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fdonut1.jpg?v=1575743371594"></div>
-                <div class="item"><img 
-                                       id="zombieunity"
-                                       onclick = "document.getElementById('introvideoiframe').src = 'https://www.youtube.com/embed/zXdOwq5UTQY';
-                    document.getElementById('centerdemo').style.display = 'block'"
-                                       onmouseover = "document.getElementById('zombieunity').style.objectFit = 'contain'
-                    document.getElementById('projname').innerHTML = 'Zombie game built with Unity3D';
-                    document.getElementById('zombieunity').src='https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Finprog.png?v=1575743373856';"
-                                       onmouseout = "
-                    document.getElementById('zombieunity').style.objectFit = 'cover'
-                    document.getElementById('zombieunity').src='https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fzombie.jpg?v=1575743371802'; 
-                    document.getElementById('projname').innerHTML = ''"
-                                       style="background: #3B52A2"
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fzombie.jpg?v=1575743371802"></div>
+            <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"
+                 onmouseover="document.getElementById('projname').innerHTML = 'Stady.app';" 
+                 onmouseout = "document.getElementById('projname').innerHTML = '';"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
+            <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"
+                 onmouseover="document.getElementById('projname').innerHTML = 'Stady.app';" 
+                 onmouseout = "document.getElementById('projname').innerHTML = '';"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
+            <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"
+                 onmouseover="document.getElementById('projname').innerHTML = 'Stady.app';" 
+                 onmouseout = "document.getElementById('projname').innerHTML = '';"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
+            <div onclick = "window.open('https://www.stadyapp.com')" class="itemStady"
+                 onmouseover="document.getElementById('projname').innerHTML = 'Stady.app';" 
+                 onmouseout = "document.getElementById('projname').innerHTML = '';"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fstadylogo.png?v=1575743372201"></div>
 
 
+        </div>
 
+        <br>
+
+        <div id="LyricsPart2">
+            <div class="itemLyrics" style="margin-left:1vw;">Told</div>
+            <div class="itemLyrics">you</div>
+            <div class="itemLyrics">not</div>
+            <div class="itemLyrics">to</div>
+            <div class="itemLyrics">worry</div>
+            <div class="itemLyrics">but</div>
+            <div class="itemLyrics">maybe</div>
+            <div class="itemLyrics">that's</div>
+            <div class="itemLyrics">a lie</div>
+        </div><br>
+
+        <div id="part1">
+            <div class="item" id="ace-98"><img 
+                                               onmouseover="aceOver()"
+                                               onmouseout="aceOut()"
+                                               style="object-fit: contain;background:black;"
+                                               onclick = "window.open('portasset/Ace-98.html')"
+                                               src="https://i.imgur.com/CQf2qj9.gif">
             </div>
-            <br>
-            <div id="LyricsPart1">
-                <div class="itemLyrics" style="margin-left:1vw;">my</div>
-                <div class="itemLyrics">soul?</div>
-                <div class="itemLyrics">so</div>
-                <div class="itemLyrics">cynical</div>
+            <div class="itemClick" id="ace-98click" style="display: none;"><img 
+                                                                                onmouseover="aceOver()"
+                                                                                onmouseout="aceOut()"
+                                                                                style="object-fit: contain;  background:black;"
+                                                                                onclick = "window.open('portasset/Ace-98.html')"
+                                                                                src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fclick.png?v=1575743371873">
             </div>
-            <br>
-            <div id="part2">
-                <div class="item"><a href="portasset/InfoGraphics.png" target="_blank">
-                    <img 
-                         onmouseover="document.getElementById('projname').innerHTML = 'IMPOSSIBLE BURGER  VS  BEEF BURGER INFOGRAPHICS <br>\n Skills: adobe illustrator, tableau';" 
-                         onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                         src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Ffakenews.jpg?v=1575742971758"></a></div>
-                <div class="item"><img 
-                                       onclick = "window.open('https://palettes.design')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Color Palette Generator';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fcolor.jpg?v=1575743371522"></div>
-                <div class="item"><img 
-                                       onclick = "window.open('https://vrtour.glitch.me/')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'VR tour guide';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fvrfinal.png?v=1575743372321"></div>
+            <div class="item"><img
+                                   onmouseover="NLPOver();
+                document.getElementById('statement').innerHTML = 'so, how do machine understand us?';"
+                                   onmouseout="NLPOut();
+                document.getElementById('statement').innerHTML = '';"
+                                   onclick = "window.open('https://encoder-compare.glitch.me')"
+                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fnlp.jpg?v=1575743371741"></div>
 
-                <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fposter.png?v=1575742997966" data-lightbox="NameCard"><img 
-                                                                                               onmouseover="document.getElementById('projname').innerHTML = 'NameCard Poster';" 
-                                                                                               onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                                                                               src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fposter.png?v=1575742997966"></a></div>
-                <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-971eb3b3698f.gif?v=1574908278199" data-lightbox="3DMG"><img 
+            <div class="item" id="donutvr"><img 
+                                                onclick = "window.open('https://donutprototype.glitch.me')"
+                                                onmouseover="document.getElementById('projname').innerHTML = 'MY CAT DONUT WEBVR SCENE <br>\n Skills: webvr, javascript'
+                document.getElementById('statement').innerHTML = 'A must-go within this site';" 
+                                                onmouseout = "document.getElementById('projname').innerHTML = '';
+                document.getElementById('statement').innerHTML = '';"            
+                                                src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fdonutvr.jpg?v=1575743371694"></div>
+            <div class="itemClick" id="donutvrclick" style="display: none;"><img 
+                                                                                 onclick = "window.open('https://donutprototype.glitch.me')"
+                                                                                 onmouseover="document.getElementById('projname').innerHTML = 'MY CAT DONUT WEBVR SCENE <br>\n Skills: webvr, javascript'
+                document.getElementById('statement').innerHTML = 'A must-go within this site';" 
+                                                                                 onmouseout = "document.getElementById('projname').innerHTML = '';
+                document.getElementById('statement').innerHTML = '';"       
+                                                                                 style="object-fit: contain;  background:#F7B46C;"
+                                                                                 src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fdonut.png?v=1575743372022">
+            </div>
+            <div class="item" id="donutroom"><img 
+                                                  onclick = "window.open('https://donutprototype2.glitch.me')"
+                                                  onmouseover="document.getElementById('projname').innerHTML = 'MY ROOM WEBVR SCENE'
+                document.getElementById('statement').innerHTML = 'Also a must-go within this site';" 
+                                                  onmouseout = "document.getElementById('projname').innerHTML = '';
+                document.getElementById('statement').innerHTML = '';"            
+                                                  src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fvrroom.png?v=1575743371577"></div>
+            <div class="itemClick" id="donutroomclick" style="display: none;"><img 
+                                                                                   onclick = "window.open('https://donutprototype2.glitch.me')"
+                                                                                   onmouseover="document.getElementById('projname').innerHTML = 'MY ROOM WEBVR SCENE'
+                document.getElementById('statement').innerHTML = 'Also a must-go within this site';" 
+                                                                                   onmouseout = "document.getElementById('projname').innerHTML = '';
+                document.getElementById('statement').innerHTML = '';"   
+                                                                                   style="object-fit: contain;  background:#96D2C6;"
+                                                                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fdonutroom.png?v=1575743372065">
+            </div>
+            <div class="item"><img 
+                                   onclick = "window.open('portasset/Cataholic.html')"
+                                   onmouseover="document.getElementById('projname').innerHTML = 'A website for cat lover <br>\n Skills: Vue.js , Vue-grid-layout.js';
+                document.getElementById('statement').innerHTML = 'ARE YOU A CATAHOLIC??';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';
+                document.getElementById('statement').innerHTML = '';" 
+                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fdonut1.jpg?v=1575743371594"></div>
+            <div class="item"><img 
+                                   id="zombieunity"
+                                   onclick = "document.getElementById('introvideoiframe').src = 'https://www.youtube.com/embed/wedVJDZLdzE';
+                document.getElementById('centerdemo').style.display = 'block'"
+                                   onmouseover = "document.getElementById('projname').innerHTML = 'Zombie game built with Unity3D';
+                                   document.getElementById('statement').innerHTML = 'Dont be scared, its okay';"
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';
+                                   document.getElementById('statement').innerHTML = '';"
+                                   style="background: #3B52A2"
+                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fzombie.jpg?v=1575743371802"></div>
+
+
+
+        </div>
+        <br>
+        <div id="LyricsPart1">
+            <div class="itemLyrics" style="margin-left:1vw;">my</div>
+            <div class="itemLyrics">soul?</div>
+            <div class="itemLyrics">so</div>
+            <div class="itemLyrics">cynical</div>
+        </div>
+        <br>
+
+        <div id="part3">
+            <div class="item" id = "gait"><img 
+                                               style = "background:black;"
+                                               onclick="window.open('portasset/gait.html')"
+                                               onmouseover="document.getElementById('projname').innerHTML = 'Research on Adversarial Examples for Silhouette-based gait recognition networks';" 
+                                               onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                               src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fgait.jpg?v=1575743372858"></div>
+            <div class="itemClick" id="gaitclick" style="display: none;"><img 
+                                                                              onclick="window.open('portasset/gait.html')"
+                                                                              onmouseover="document.getElementById('projname').innerHTML = 'Research on Adversarial Examples for Silhouette-based gait recognition networks';" 
+                                                                              onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                                                              style="object-fit: contain;  background:black;"
+                                                                              src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fclick.png?v=1575743371873">
+            </div>
+
+            <div class="item"><img 
+                                   onclick="window.open('portasset/CNNGAN.html')"
+                                   onmouseover="document.getElementById('projname').innerHTML = 'Generate number image from scratch using CNN and GAN';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                   style="object-fit: contain;" src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fcnngan.png?v=1575743371935"></div>
+            <div class="item"><img 
+                                   onclick="window.open('portasset/mapping.html')"
+                                   onmouseover="document.getElementById('projname').innerHTML = 'Kernalized K-mean & predicting city location utilizing the distance between them';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fmapping.png?v=1575743372561"></div>
+            <div class="item"><img 
+                                   onclick="window.open('portasset/Rplot.html')"
+                                   onmouseover="document.getElementById('projname').innerHTML = 'Hospital data exploration';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                   style="object-fit: contain;" src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FRplot02.png?v=1575742936653"></div>
+            <div class="item"><img 
+                                   onclick="window.open('portasset/ExamScoreRegression.html')"
+                                   onmouseover="document.getElementById('projname').innerHTML = 'Exam score regression analysis';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                   style="object-fit: contain;" 
+                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fexamscore.jpg?v=1575743371623"></div>
+            <div class="item"><img 
+                                   onclick="window.open('portasset/ML_hw1.html')"
+                                   onmouseover="document.getElementById('projname').innerHTML = 'Hand-Coded decision tree algorithm';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                   style="object-fit: contain;" 
+                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fdt.jpg?v=1575743371610"></div>
+        </div>
+
+        <br>
+
+        <div id="LyricsPart5">
+            <div class="itemLyrics" style="margin-left:1vw;">MY</div>
+            <div class="itemLyrics">STRANGE</div>
+            <div class="itemLyrics">ADDICTION</div>
+        </div>
+        <br>
+        <div id = "part5">
+            <br>
+            <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-1-b7e8e0c05a93.gif?v=1574404464002" data-lightbox="billardanim"><img onmouseover="document.getElementById('projname').innerHTML = 'Falling ball animation in Maya';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-1-b7e8e0c05a93.gif?v=1574404464002"></a></div>
+            <div class="item"><a href = "https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FFirst_Iteration.gif?v=1576088074573" data-lightbox = "stadypo"> <img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Stady 3D poster';" 
+                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FFirst_Iteration.gif?v=1576088074573"></a></div>    
+            <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-971eb3b3698f.gif?v=1574908278199" data-lightbox="3DMG"><img 
                                        id = "fakenews"
                                        style="background: #3B52A2"
                                        onmouseover = "document.getElementById('projname').innerHTML = 'Fake news 3d motion graphics';
-                    document.getElementById('fakenews').style.objectFit = 'contain'
-                    document.getElementById('fakenews').src='https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Finprog.png?v=1575743373856';"
+                document.getElementById('fakenews').style.objectFit = 'contain'
+                document.getElementById('fakenews').src='https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Finprog.png?v=1575743373856';"
                                        onmouseout = "document.getElementById('fakenews').style.objectFit = 'cover'
-                    document.getElementById('fakenews').src='https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Ffakenews.jpg?v=1575743372678'; 
-                    document.getElementById('projname').innerHTML = ''"                                       
+                document.getElementById('fakenews').src='https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Ffakenews.jpg?v=1575743372678'; 
+                document.getElementById('projname').innerHTML = ''"                                       
                                        src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Ffakenews.jpg?v=1575743372678"></a></div>      
 
-                <div class="item"><img 
-                                       onclick = "window.open('https://bookdesign.glitch.me')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Typography : Book Design';" 
+            <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fposter.png?v=1575742997966" data-lightbox="NameCard"><img 
+                                                                                               onmouseover="document.getElementById('projname').innerHTML = 'NameCard Poster';" 
+                                                                                               onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                                                                               src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fposter.png?v=1575742997966"></a></div>
+
+            <div class="item"><img 
+                                   onclick = "window.open('https://bookdesign.glitch.me')"
+                                   onmouseover="document.getElementById('projname').innerHTML = 'Typography : Book Design';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fbook.png?v=1575743371894"></div>   
+            <div class="item"><a href="portasset/InfoGraphics.png" target="_blank">
+                <img 
+                     onmouseover="document.getElementById('projname').innerHTML = 'IMPOSSIBLE BURGER  VS  BEEF BURGER INFOGRAPHICS <br>\n Skills: adobe illustrator, tableau';" 
+                     onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                     src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fimpossible.jpg?v=1575743373021"></a></div>
+
+
+            <!-- <div class="item"><img 
+onmouseover="document.getElementById('projname').innerHTML = 'Unity3D draft';" 
+onmouseout = "document.getElementById('projname').innerHTML = '';" 
+onclick = "document.getElementById('introvideoiframe').src = 'https://www.youtube.com/embed/g7875JqxEKc';
+document.getElementById('centerdemo').style.display = 'block'"
+src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fminion.png?v=1575743372094"></div> -->
+            <!-- <div class="item"><img 
+onclick = "window.open('https://3d-tv.glitch.me/')"
+onmouseover="document.getElementById('projname').innerHTML = 'Television in VR. Press any key to switch channel';" 
+onmouseout = "document.getElementById('projname').innerHTML = '';" 
+src="portasset/tel.jpg"></div> -->
+            <!-- <div class="item"><img 
+onclick = "window.open('https://vrtour.glitch.me/')"
+onmouseover="document.getElementById('projname').innerHTML = 'VR tour guide';" 
+onmouseout = "document.getElementById('projname').innerHTML = '';" 
+src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fvrfinal.png?v=1575743372321"></div> -->
+
+
+
+            <!-- <div class="item"><img 
+onclick = "window.open('https://www.zijiachen.com/v1.1/portfolio')"
+onmouseover="document.getElementById('projname').innerHTML = 'Portfolio v1.0';" 
+onmouseout = "document.getElementById('projname').innerHTML = '';" 
+src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fmeow.jpg?v=1575743371759"></div> -->
+
+        </div>
+
+
+        <br>            
+        <div id="LyricsPart4">
+            <div class="itemLyrics" style="margin-left:1vw;">When</div>
+            <div class="itemLyrics">we</div>
+            <div class="itemLyrics">all</div>
+            <div class="itemLyrics">fall</div>
+            <div class="itemLyrics">asleep,</div>
+            <div class="itemLyrics">where</div>
+            <div class="itemLyrics">do</div>
+            <div class="itemLyrics">we</div>
+            <div class="itemLyrics">go</div>
+            <div class="itemLyrics">?</div>
+        </div>
+
+        <br>
+
+        <div id="part2">
+            <div class="item"><img 
+                                   onclick = "window.open('https://3d-tv.glitch.me/')"
+                                   onmouseover="document.getElementById('projname').innerHTML = 'Small VR room with Television.';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                   src="https://cdn.glitch.com/05c0144e-979a-41cb-b282-22ebf65235bc%2Fimages.jfif?v=1575785275224"></div>
+            <div class="item"><a 
+                                 onmouseover="document.getElementById('projname').innerHTML = 'Gun Model in Maya';" 
+                                 onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                 href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fgun3D.gif?v=1575742880005" data-lightbox="gun3D"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fgun3D.gif?v=1575742880005"></a></div>
+
+            <div class="item"><a 
+                                 onmouseover="document.getElementById('projname').innerHTML = 'Unity3D AR draft';" 
+                                 onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                 href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Far_draft.gif?v=1575338052424" data-lightbox="ardraft"><img 
+                                     id = "ardraft"
+                                     style="background: #3B52A2"
+                                     onmouseover = "
+                document.getElementById('ardraft').style.objectFit = 'contain'
+                document.getElementById('ardraft').src='https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Finprog.png?v=1575743373856';"
+                                     onmouseout = "document.getElementById('ardraft').style.objectFit = 'cover'
+                document.getElementById('ardraft').src='https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Far_draft.gif?v=1575338052424'; "
+                                     src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Far_draft.gif?v=1575338052424"></a></div>
+            <div class="item"><img 
+                                   onclick = "window.open('https://palettes.design')"
+                                   onmouseover="document.getElementById('projname').innerHTML = 'Color Palette Generator';" 
+                                   onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fcolor.jpg?v=1575743371522"></div>
+
+
+            <div class="item"><a href = "https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-fac774beb759.gif?v=1575562802690" data-lightbox = "3dpo"> <img 
+                                       onmouseover="document.getElementById('projname').innerHTML = 'Stady 3D poster';" 
                                        onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fbook.png?v=1575743371894"></div>
-                <!--
+                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-fac774beb759.gif?v=1575562802690"></a></div>
+            <div class="item"><a 
+                                 onmouseover="document.getElementById('projname').innerHTML = 'Squashing ice cream animation in Maya';" 
+                                 onmouseout = "document.getElementById('projname').innerHTML = '';" 
+                                 href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-1a0d02643c9f.gif?v=1574205602851" data-lightbox="iceCream"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-1a0d02643c9f.gif?v=1574205602851"></a></div>
+
+            <!--
 
 <div class="item"><img 
 onmouseover="document.getElementById('projname').innerHTML = 'CSS-Loader';" 
@@ -692,152 +841,45 @@ onmouseout = "document.getElementById('projname').innerHTML = '';"
 src="portasset/rotate-block.gif"></div>
 -->
 
-            </div>
-            <br>
+        </div>
+        <br>
 
-            <div id="LyricsPart5">
-                <div class="itemLyrics" style="margin-left:1vw;">MY</div>
-                <div class="itemLyrics">STRANGE</div>
-                <div class="itemLyrics">ADDICTION</div>
-            </div>
-            <br>
-            <div id="part3">
-                <div class="item" id = "gait"><img 
-                                                   style = "background:black;"
-                                                   onclick="window.open('https://github.com/nirvanaczj/GaitRecFooler/blob/master/Project%20Report.pdf')"
-                                                   onmouseover="document.getElementById('projname').innerHTML = 'Research on Adversarial Examples for Silhouette-based gait recognition networks';" 
-                                                   onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                                   src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fgait.jpg?v=1575743372858"></div>
-                <div class="itemClick" id="gaitclick" style="display: none;"><img 
-                                                                                  onclick="window.open('https://github.com/nirvanaczj/GaitRecFooler/blob/master/Project%20Report.pdf')"
-                                                                                  onmouseover="document.getElementById('projname').innerHTML = 'Research on Adversarial Examples for Silhouette-based gait recognition networks';" 
-                                                                                  onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                                                                  style="object-fit: contain;  background:black;"
-                                                                                  src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fclick.png?v=1575743371873">
-                </div>
-                <div class="item"><img 
-                                       onclick="window.open('portasset/CNNGAN.html')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Generate number image from scratch using CNN and GAN';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       style="object-fit: contain;" src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fcnngan.png?v=1575743371935"></div>
-                <div class="item"><img 
-                                       onclick="window.open('portasset/mapping.html')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Kernalized K-mean & predicting city location utilizing the distance between them';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fmapping.png?v=1575743372561"></div>
-                <div class="item"><img 
-                                       onclick="window.open('portasset/Rplot.html')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Hospital data exploration';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       style="object-fit: contain;" src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2FRplot02.png?v=1575742936653"></div>
-                <div class="item"><img 
-                                       onclick="window.open('portasset/ExamScoreRegression.html')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Exam score regression analysis';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       style="object-fit: contain;" 
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fexamscore.jpg?v=1575743371623"></div>
-                <div class="item"><img 
-                                       onclick="window.open('portasset/ML_hw1.html')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Hand-Coded decision tree algorithm';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       style="object-fit: contain;" 
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fdt.jpg?v=1575743371610"></div>
-            </div>
-
-
-            <br>            
-            <div id="LyricsPart4">
-                <div class="itemLyrics" style="margin-left:1vw;">When</div>
-                <div class="itemLyrics">we</div>
-                <div class="itemLyrics">all</div>
-                <div class="itemLyrics">fall</div>
-                <div class="itemLyrics">asleep,</div>
-                <div class="itemLyrics">where</div>
-                <div class="itemLyrics">do</div>
-                <div class="itemLyrics">we</div>
-                <div class="itemLyrics">go</div>
-                <div class="itemLyrics">?</div>
-            </div>
-
-            <br>
-
-            <div id = "part5">
-                <br>
-                <div class="item"><a href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-1-b7e8e0c05a93.gif?v=1574404464002" data-lightbox="billardanim"><img onmouseover="document.getElementById('projname').innerHTML = 'Maya draft';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-1-b7e8e0c05a93.gif?v=1574404464002"></a></div>
-                <div class="item"><a 
-                                     onmouseover="document.getElementById('projname').innerHTML = 'Maya draft';" 
-                                     onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                     href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-1a0d02643c9f.gif?v=1574205602851" data-lightbox="iceCream"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-1a0d02643c9f.gif?v=1574205602851"></a></div>
-                <div class="item"><a 
-                                     onmouseover="document.getElementById('projname').innerHTML = 'Unity3D AR draft';" 
-                                     onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                     href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Far_draft.gif?v=1575338052424" data-lightbox="ardraft"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Far_draft.gif?v=1575338052424"></a></div>
-                <div class="item"><a 
-                                     onmouseover="document.getElementById('projname').innerHTML = 'Maya draft';" 
-                                     onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                     href="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fgun3D.gif?v=1575742880005" data-lightbox="gun3D"><img src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fgun3D.gif?v=1575742880005"></a></div>
-                <div class="item"><img 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Unity3D draft';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       onclick = "document.getElementById('introvideoiframe').src = 'https://www.youtube.com/embed/g7875JqxEKc';
-                    document.getElementById('centerdemo').style.display = 'block'"
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fminion.png?v=1575743372094"></div>
-                <!-- <div class="item"><img 
-                                       onclick = "window.open('https://3d-tv.glitch.me/')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Television in VR. Press any key to switch channel';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="portasset/tel.jpg"></div> -->
-                <div class="item"><a href = "https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-fac774beb759.gif?v=1575562802690" data-lightbox = "3dpo"> <img 
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Stady 3D poster';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fezgif-6-fac774beb759.gif?v=1575562802690"></a></div>
-                <div class="item"><img 
-                                       onclick = "window.open('https://www.zijiachen.com/v1.1/portfolio')"
-                                       onmouseover="document.getElementById('projname').innerHTML = 'Portfolio v1.0';" 
-                                       onmouseout = "document.getElementById('projname').innerHTML = '';" 
-                                       src="https://cdn.glitch.com/a65c55b1-5c68-45c6-b5a7-5bc4c0f00dd6%2Fmeow.jpg?v=1575743371759"></div>
-
-            </div>
-            <br>
-
-            <div id="LyricsPart3">
-                <div class="itemLyrics" style="margin-left:1vw;">Standing</div>
-                <div class="itemLyrics">there,</div>
-                <div class="itemLyrics">killing</div>
-                <div class="itemLyrics">time,</div>
-                <div class="itemLyrics">can't</div>
-                <div class="itemLyrics">commit</div>
-                <div class="itemLyrics">to </div>
-                <div class="itemLyrics">anything </div>
-                <div class="itemLyrics">but </div>
-                <div class="itemLyrics">a</div>
-                <div class="itemLyrics">crime</div>
-            </div>
-
-
-
-
-
+        <div id="LyricsPart3">
+            <div class="itemLyrics" style="margin-left:1vw;">Standing</div>
+            <div class="itemLyrics">there,</div>
+            <div class="itemLyrics">killing</div>
+            <div class="itemLyrics">time,</div>
+            <div class="itemLyrics">can't</div>
+            <div class="itemLyrics">commit</div>
+            <div class="itemLyrics">to </div>
+            <div class="itemLyrics">anything </div>
+            <div class="itemLyrics">but </div>
+            <div class="itemLyrics">a</div>
+            <div class="itemLyrics">crime</div>
         </div>
 
 
-        <script src='https://gist.github.com/mrdoob/838785/raw/a19a753b441d6ad41707c58f06dbe17f3470423c/RequestAnimationFrame.js'></script>
-        <script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
-        <script src='https://raw.github.com/mrdoob/stats.js/master/build/stats.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-        <script src="js/lightbox.js"></script>
-        <script>
-            lightbox.option({
 
-            })
-        </script>
-        <script  src="js/index.js"></script>
-        <script  src="js/type.js"></script>
-        <script  src="js/cool.js"></script>
-        <script  src="js/filter.js"></script>
-        <script  src="js/mouse.js"></script>
+
+
+<!--        </div>-->
+
+
+    <script src='https://gist.github.com/mrdoob/838785/raw/a19a753b441d6ad41707c58f06dbe17f3470423c/RequestAnimationFrame.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/opentype.js@latest/dist/opentype.min.js"></script>
+    <script src='https://raw.github.com/mrdoob/stats.js/master/build/stats.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src="js/lightbox.js"></script>
+    <script>
+        lightbox.option({
+
+        })
+    </script>
+    <script  src="js/index.js"></script>
+    <script  src="js/type.js"></script>
+    <script  src="js/cool.js"></script>
+    <script  src="js/filter.js"></script>
+    <script  src="js/mouse.js"></script>
     </body>
 </html>

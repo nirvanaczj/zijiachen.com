@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>CNN & RNN Exercise</title>
+<title>CNN&RNN&GAN</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13077,12 +13077,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>By:ZiJia Chen<br>In this exercise, we are prompt to use CNN to recognize MNIST data and RNN to regenerate digit images.</strong></p>
+<p><strong>By:ZiJia Chen<br>In this exercise, we are prompt to use CNN&amp;RNN to recognize MNIST data and GAN to regenerate digit images.</strong></p>
 <p>Result: <br>
-CNN:<br>
 Test accuracy of 99.05%
-<br>
-RNN:<br><img src="https://i.imgur.com/1igM6La.png"></p>
+<br>Generated Digit Images:<br/><img src="https://i.imgur.com/1igM6La.png"></p>
 
 </div>
 </div>
@@ -13138,29 +13136,23 @@ RNN:<br><img src="https://i.imgur.com/1igM6La.png"></p>
                  <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span>
                  <span class="n">input_shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">),</span>
   <span class="c1"># ADD a convolutional layer. CONV2D: filters 64, kernel_size (3,3), activation function leaky relu(alpha=0.05)</span>
-  <span class="c1">### START YOUR CODE HERE ### </span>
   <span class="n">Conv2D</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span><span class="n">input_shape</span><span class="o">=</span><span class="n">input_shape</span><span class="p">),</span>
     
   <span class="n">LeakyReLU</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
 
-  <span class="c1">### END YOUR CODE HERE ###</span>
   <span class="n">MaxPooling2D</span><span class="p">(</span><span class="n">pool_size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)),</span>
   <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">),</span>
   <span class="n">Flatten</span><span class="p">(),</span>
   <span class="c1"># ADD a fully connected layer. Dense: 128 neurons, activation function relu</span>
-  <span class="c1">### START YOUR CODE HERE ### </span>
   <span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
-  <span class="c1">### END YOUR CODE HERE ###</span>
   <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.5</span><span class="p">),</span>
   <span class="n">Dense</span><span class="p">(</span><span class="n">num_classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;softmax&#39;</span><span class="p">)</span>
 <span class="p">])</span>
 
 <span class="c1"># Compile the model. COMPILE: loss function categorical_crossentropy, optimizer adam</span>
-<span class="c1">### START YOUR CODE HERE ###</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s1">&#39;adam&#39;</span><span class="p">,</span><span class="s1">&#39;categorical_crossentropy&#39;</span><span class="p">,</span><span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;acc&#39;</span><span class="p">])</span>
 
-<span class="c1">### END YOUR CODE HERE ###</span>
 
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span>
           <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span>
@@ -13268,10 +13260,8 @@ Test accuracy: 0.9905
 <span class="n">y</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">])</span>
 
 <span class="c1"># Construct LSTM structure using BasicLSTMCell function</span>
-<span class="c1">### START YOUR CODE HERE ### </span>
 <span class="n">basic_cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">rnn_cell</span><span class="o">.</span><span class="n">BasicLSTMCell</span><span class="p">(</span><span class="n">n_hiddens</span><span class="p">,</span> <span class="n">forget_bias</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">state_is_tuple</span><span class="o">=</span><span class="kc">True</span><span class="p">,)</span>
 
-<span class="c1">### END YOUR CODE HERE ###</span>
 <span class="n">outputs</span><span class="p">,</span> <span class="n">states</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">dynamic_rnn</span><span class="p">(</span><span class="n">basic_cell</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
 
 
@@ -13453,13 +13443,7 @@ Use keras.layers.dense instead.
 
 
 <span class="k">def</span> <span class="nf">float_image_to_uint8</span><span class="p">(</span><span class="n">image</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Convert float image in [-1, 1) to [0, 255] uint8.</span>
-<span class="sd">    Note that `1` gets mapped to `0`, but `1 - epsilon` gets mapped to 255.</span>
-<span class="sd">    Args:</span>
-<span class="sd">        image: An image tensor. Values should be in [-1, 1).</span>
-<span class="sd">    Returns:</span>
-<span class="sd">        Input image cast to uint8 and with integer values in [0, 255].</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="n">image</span> <span class="o">=</span> <span class="p">(</span><span class="n">image</span> <span class="o">*</span> <span class="mf">128.0</span><span class="p">)</span> <span class="o">+</span> <span class="mf">128.0</span>
 
     <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">cast</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
@@ -13487,18 +13471,7 @@ Use keras.layers.dense instead.
 
 
 <span class="k">def</span> <span class="nf">unconditional_generator</span><span class="p">(</span><span class="n">noise</span><span class="p">,</span> <span class="n">weight_decay</span><span class="o">=</span><span class="mf">2.5e-5</span><span class="p">,</span> <span class="n">is_training</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Simple generator to produce MNIST images.</span>
 
-<span class="sd">    Args:</span>
-<span class="sd">        noise: A single Tensor representing noise.</span>
-<span class="sd">        weight_decay: The value of the l2 weight decay.</span>
-<span class="sd">        is_training: If `True`, batch norm uses batch statistics. If `False`, batch</span>
-<span class="sd">            norm uses the exponential moving average collected from population </span>
-<span class="sd">            statistics.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        A generated image in the range [-1, 1].</span>
-<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">arg_scope</span><span class="p">(</span>
         <span class="p">[</span><span class="n">layers</span><span class="o">.</span><span class="n">fully_connected</span><span class="p">,</span> <span class="n">layers</span><span class="o">.</span><span class="n">conv2d_transpose</span><span class="p">],</span>
         <span class="n">activation_fn</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">,</span> <span class="n">normalizer_fn</span><span class="o">=</span><span class="n">layers</span><span class="o">.</span><span class="n">batch_norm</span><span class="p">,</span>
@@ -13520,22 +13493,7 @@ Use keras.layers.dense instead.
 
 <span class="k">def</span> <span class="nf">unconditional_discriminator</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">unused_conditioning</span><span class="p">,</span> <span class="n">weight_decay</span><span class="o">=</span><span class="mf">2.5e-5</span><span class="p">,</span>
                      <span class="n">is_training</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Discriminator network on MNIST digits.</span>
 
-<span class="sd">    Args:</span>
-<span class="sd">        img: Real or generated MNIST digits. Should be in the range [-1, 1].</span>
-<span class="sd">        unused_conditioning: The TFGAN API can help with conditional GANs, which</span>
-<span class="sd">            would require extra `condition` information to both the generator and the</span>
-<span class="sd">            discriminator. Since this example is not conditional, we do not use this</span>
-<span class="sd">            argument.</span>
-<span class="sd">        weight_decay: The L2 weight decay.</span>
-<span class="sd">        is_training: If `True`, batch norm uses batch statistics. If `False`, batch</span>
-<span class="sd">            norm uses the exponential moving average collected from population </span>
-<span class="sd">            statistics.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        Logits for the probability that the image is real.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">arg_scope</span><span class="p">(</span>
         <span class="p">[</span><span class="n">layers</span><span class="o">.</span><span class="n">conv2d</span><span class="p">,</span> <span class="n">layers</span><span class="o">.</span><span class="n">fully_connected</span><span class="p">],</span>
         <span class="n">activation_fn</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">relu</span><span class="p">,</span> <span class="n">normalizer_fn</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
@@ -13605,14 +13563,12 @@ Use keras.layers.dense instead.
     <span class="c1"># ADD a loss function. tfgan.gan_loss: generator loss function wasserstein loss, discriminator loss function wasserstein loss, </span>
     <span class="c1"># gradient_penalty_weight 1.0, add_summaries=True</span>
     <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s1">&#39;loss&#39;</span><span class="p">):</span>
-        <span class="c1">### START YOUR CODE HERE ### </span>
             <span class="n">gan_loss</span> <span class="o">=</span> <span class="n">tfgan</span><span class="o">.</span><span class="n">gan_loss</span><span class="p">(</span>
             <span class="n">gan_model</span><span class="p">,</span>
             <span class="n">generator_loss_fn</span><span class="o">=</span><span class="n">tfgan</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">wasserstein_generator_loss</span><span class="p">,</span>
             <span class="n">discriminator_loss_fn</span><span class="o">=</span><span class="n">tfgan</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">wasserstein_discriminator_loss</span><span class="p">,</span>
             <span class="n">gradient_penalty_weight</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
             <span class="n">add_summaries</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="c1">### END YOUR CODE HERE ### </span>
         
     <span class="n">generator_optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">AdamOptimizer</span><span class="p">(</span><span class="n">gen_lr</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
     <span class="n">discriminator_optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">AdamOptimizer</span><span class="p">(</span><span class="n">dis_lr</span><span class="p">,</span> <span class="n">beta1</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
@@ -13620,7 +13576,6 @@ Use keras.layers.dense instead.
     <span class="c1"># ADD a train ops. tfgan.gan_train_ops: check_for_unused_update_ops false, </span>
     <span class="c1"># summarize_gradients true, aggregation_method tf.AggregationMethod.EXPERIMENTAL_ACCUMULATE_N</span>
     <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">name_scope</span><span class="p">(</span><span class="s1">&#39;train&#39;</span><span class="p">):</span>
-        <span class="c1">### START YOUR CODE HERE ### </span>
             <span class="n">train_ops</span> <span class="o">=</span> <span class="n">tfgan</span><span class="o">.</span><span class="n">gan_train_ops</span><span class="p">(</span>
             <span class="n">gan_model</span><span class="p">,</span>
             <span class="n">gan_loss</span><span class="p">,</span>
@@ -13629,7 +13584,6 @@ Use keras.layers.dense instead.
             <span class="n">check_for_unused_update_ops</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
             <span class="n">summarize_gradients</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
             <span class="n">aggregation_method</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">AggregationMethod</span><span class="o">.</span><span class="n">EXPERIMENTAL_ACCUMULATE_N</span><span class="p">)</span>
-        <span class="c1">### END YOUR CODE HERE ### </span>
         
     <span class="c1"># Run the train ops in the alternating training scheme.</span>
     <span class="n">tfgan</span><span class="o">.</span><span class="n">gan_train</span><span class="p">(</span>

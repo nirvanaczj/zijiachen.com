@@ -143,13 +143,13 @@ setInterval(function(){
 
 
 function StopFunction() {
-    donutroom.style.display = "inline-block"
+    // donutroom.style.display = "inline-block"
     donutroomclick.style.display = "none"
-    donut.style.display = "inline-block"
+    // donut.style.display = "inline-block"
     donutclick.style.display = "none"
-    gait.style.display = "inline-block"
+    // gait.style.display = "inline-block"
     gaitclick.style.display = "none"
-    ace98.style.display = "inline-block"
+    // ace98.style.display = "inline-block"
     ace98click.style.display = "none"
     clearInterval(myclickdonutroom);
     clearInterval(myclickdonut);
@@ -158,13 +158,13 @@ function StopFunction() {
 }
 
 function RestartFunction() {
-    donutroomclick.style.display = "inline-block"
+    // donutroomclick.style.display = "inline-block"
     donutroom.style.display = "none"
-    donutclick.style.display = "inline-block"
+    // donutclick.style.display = "inline-block"
     donut.style.display = "none"
-    gaitclick.style.display = "inline-block"
+    // gaitclick.style.display = "inline-block"
     gait.style.display = "none"
-    ace98click.style.display = "inline-block"
+    // ace98click.style.display = "inline-block"
     ace98.style.display = "none"
     
     clearInterval(myclickdonutroom);
